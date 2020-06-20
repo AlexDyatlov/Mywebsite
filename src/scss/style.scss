@@ -2,9 +2,80 @@
 @import 'vars';
 @import 'global';
 
+// start header
+.header{
+  min-height: 750px;
+  background: rgb(138,91,173);
+  background: linear-gradient(90deg, rgba(138,91,173,1) 0%, rgba(138,91,173,1) 0%, rgba(204,188,218,1) 100%, rgba(138,91,173,1) 100%);
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    height: 120px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
+.header__logo{
+  &-box{
+    display: flex;
+    align-items: center;
+  }
+  img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  span{
+    color: #e0e0e9;
+    padding-left: 30px;
+    font-size: 24px;
+  }
+}
+.menu{
+  display: flex;
+  align-items: center;
+}
+.menu__list{
+  li{
+    display: inline-block;
+    & + li{
+      margin-left: 75px;
+    }
+  }
+  a{
+    color: #fff;
+  }
+}
 
+.header__info{
+  &-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-title{
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 45px;
+    line-height: 53px;
+  }
+  &-text{
+    font-size: 24px;
+    line-height: 32px;
+    color: #e0e0e9;
+    margin-bottom: 15px;
+  }
+  &-social{
 
-
+  }
+  &-img{
+    img{
+    width: 500px;
+    height: 500px;
+    }
+  }
+}
+//end header
 
 
 
