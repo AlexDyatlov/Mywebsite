@@ -39,7 +39,7 @@
   li{
     display: inline-block;
     & + li{
-      margin-left: 75px;
+      margin-left: 30px;
     }
   }
   a{
@@ -77,7 +77,25 @@
 }
 //end header
 
+//start about-me
+.about-me{
+  padding: 50px 0 50px;
+  text-align: center;
+}
+.about-item{
+  max-width: 625px;
+  margin: 0 auto;
+  &__img{
+    margin-bottom: 25px;
+    img{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+}
 
+//end about-me
 
 
 
