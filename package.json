@@ -43,6 +43,7 @@
     "imagemin-jpeg-recompress": "^6.0.0",
     "replace": "^1.1.5",
     "sass": "^1.24.2",
+    "slick-carousel": "^1.8.1",
     "ttf2woff": "^2.0.1",
     "ttf2woff2": "^3.0.0"
   },
