@@ -16,7 +16,7 @@
     <div class="header__inner">
       <div class="header__logo">
         <a class="header__logo-box" href="#">
-          <img src="img/man.svg" alt="">
+          <img src="img/logo.svg" alt="">
           <span>Alexandr Dyatlov</span>
         </a>
       </div>
@@ -39,12 +39,12 @@
           </li>
           <li>
             <a href="#">
-             Навыки
+              Навыки
             </a>
           </li>
           <li>
             <a href="#">
-              Портфолио
+              Работы
             </a>
           </li>
           <li>
@@ -63,11 +63,6 @@
         <div class="header__info-text">
           Junior веб разработчик
         </div>
-        <div class="header__info-social">
-          <a href="#">vk</a>
-          <a href="#">insta</a>
-          <a href="#">tg</a>
-        </div>
       </div>
       <div class="header__info-img">
         <img src="img/home-right.png" alt="">
@@ -80,7 +75,7 @@
     <div class="container">
       <div class="about-item">
         <div class="about-item__img">
-          <img src="img/man.svg" alt="">
+          <img src="img/logo.svg" alt="">
         </div>
         <div class="about-item__text">
           <p>Меня зовут Александр Дятлов, я являюсь сертифицированным веб-разработчиком. Мне 19 лет, студент, живу в
@@ -192,11 +187,11 @@
               <ul class="skills__col-list">
                 <li>БЭМ</li>
                 <li>SCSS/SASS</li>
-                <li>Gulp</li>
+                <li>jQuery</li>
                 <li>Flex и Grid</li>
+                <li>Gulp</li>
                 <li>Git и GitHub</li>
                 <li>npm</li>
-                <li>jQuery</li>
               </ul>
             </div>
             <div class="skills__col">
@@ -204,10 +199,11 @@
                 Дополнительно:
               </div>
               <ul class="skills__col-list">
-                <li>Photoshop, Figma, Zeplin</li>
                 <li>Семантика</li>
                 <li>Кроссбраузерность</li>
+                <li>Доступность</li>
                 <li>Адаптивная вёрстка</li>
+                <li>Photoshop, Figma, Zeplin</li>
                 <li>Pixel Perfect</li>
                 <li>Mobile First</li>
               </ul>
@@ -286,7 +282,6 @@
         Здесь представлены мои работы.
       </div>
       <div class="works__slider">
-
         <div class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
@@ -307,8 +302,6 @@
             </div>
           </div>
         </div>
-
-
         <div class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
@@ -329,8 +322,6 @@
             </div>
           </div>
         </div>
-
-
         <div class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
@@ -351,7 +342,6 @@
             </div>
           </div>
         </div>
-
         <div class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
@@ -372,7 +362,6 @@
             </div>
           </div>
         </div>
-
         <div class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
@@ -393,14 +382,63 @@
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   </section>
   <!-- STOP WRITE CODE -->
-  <footer>
-  
+  <footer class="footer">
+  <div class="footer__content">
+    <div class="container">
+      <div class="footer__title section-title">
+        Контакты
+      </div>
+      <div class="footer__text title">
+        Давайте работать вместе.
+      </div>
+      <div class="contact__inner-info">
+        <div class="contact__form">
+          <div class="contact__form-text">
+            Есть проект, который вы хотели бы обсудить?
+          </div>
+          <form>
+            <div class="contact__form-row">
+              <input class="form-contact" type="text" placeholder="Имя" required>
+              <input class="form-contact" type="email" placeholder="Email" required>
+            </div>
+            <textarea class="form-contact" placeholder="Сообщение" required></textarea>
+            <div class="contact__form-politics">
+              <input type="checkbox" id="checkbox">
+              <div class="politics-desc">
+                Я принимаю условия политики конфиденциальности и даю согласие на обработку персональных данных.
+              </div>
+            </div>
+            <button type="submit" name="send-sms" disabled="disabled" id="send-sms">Отправить</button>
+          </form>
+        </div>
+        <div class="contact__social">
+          <div class="contact__social-title">
+            Мои социальные сети:
+          </div>
+          <ul class="contact__social-link">
+            <li class="link link-email"><a href="#">Почта</a></li>
+            <li class="link link-vk"><a href="https://vk.com/id168356073">ВКонтакте</a></li>
+            <li class="link link-telegram"><a href="https://t.me/bsbhahs">Telegram</a></li>
+            <li class="link link-instagram"> <a href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a></li>
+            <li class="link link-linkedin"><a href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
+            </li>
+            <li class="link link-github"><a href="https://github.com/AlexDyatlov">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copy">
+    <div class="container">
+      <div class="footer__copy-text">
+        © 2020 Alex Dyatlov. Все права защищены.
+      </div>
+    </div>
+  </div>
 </footer>
   <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>

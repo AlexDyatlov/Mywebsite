@@ -8,11 +8,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?i598km');
-  src:  url('../fonts/icomoon.eot?i598km#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?i598km') format('truetype'),
-    url('../fonts/icomoon.woff?i598km') format('woff'),
-    url('../fonts/icomoon.svg?i598km#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?q2mhje');
+  src:  url('../fonts/icomoon.eot?q2mhje#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?q2mhje') format('truetype'),
+    url('../fonts/icomoon.woff?q2mhje') format('woff'),
+    url('../fonts/icomoon.svg?q2mhje#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -33,6 +33,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-check:before {
+  content: "\f00c";
+}
 .icon-angle-right:before {
   content: "\f105";
 }
+
+
