@@ -27,15 +27,18 @@
     border-radius: 50%;
   }
   span{
-    color: #e0e0e9;
+    color: $text-color;
     padding: 0 30px;
     font-size: 24px;
-    font-family: 'Balsamiq Sans', cursive;
+    @include Balsamiq-Sans;
   }
 }
 .menu{
   display: flex;
   align-items: center;
+  &__btn{
+    display: none;
+  }
 }
 .menu__list{
   li{
@@ -46,12 +49,40 @@
   }
   a{
     color: #fff;
-    font-family: 'Balsamiq Sans', cursive;
+    @include Balsamiq-Sans;
+    position: relative;
+    transition: all 0.6s;
+    outline: transparent;
+    &:before {
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: $blue;
+        transition: all 0.5s;
+    }
+    &:hover,&:focus{
+      color: $blue;
+        &:before {
+            width: 100%;
+            left: 0;
+            background: $blue;
+        }
+      }
+    }
+    li.active a{
+      color: $blue;
+      &:before {
+        width: 100%;
+        left: 0;
+        background: $blue;
+      }
+    }
   }
-}
-
 .header__info{
-  font-family: 'Balsamiq Sans', cursive;
+  @include Balsamiq-Sans;
   max-width: 330px;
   width: 100%;
   &-box{
@@ -67,17 +98,17 @@
     a{
       color: #000;
       text-decoration: underline;
-      text-decoration-color: #e0e0e9;
-      &:hover{
-        color: #1d2753;
-        text-decoration-color: #1d2753;
+      text-decoration-color: $text-color;
+      &:hover,&:focus{
+        color: $dark-blue;
+        text-decoration-color: $dark-blue;
       }
     }
   }
   &-text{
     font-size: 24px;
     line-height: 32px;
-    color: #e0e0e9;
+    color: $text-color;
     margin-bottom: 15px;
   }
   &-img{
@@ -98,7 +129,7 @@
 .about-item{
   max-width: 595px;
   margin: 0 auto;
-  font-family: 'Balsamiq Sans', cursive;
+  @include Balsamiq-Sans;
   &__img{
     margin-bottom: 25px;
     img{
@@ -142,7 +173,7 @@
       border-radius: 4px;
       color: #fff;
       display: inline-block;
-      &:hover{
+      &:hover,&:focus{
          background-color: #8c5eae;
       }
     }
@@ -153,7 +184,6 @@
   justify-content: space-between;
 }
 .services__item{
-  font-family: 'Roboto', sans-serif;
   max-width: 375px;
   min-height: 430px;
   background-color: #f9f9f9;
@@ -165,7 +195,7 @@
   border-radius: 20px;
   &:before{
     content: '';
-    background: #4338c1cc;
+    background: $light-blue;
     z-index: 5;
     height: 180px;
     position: absolute;
@@ -176,7 +206,7 @@
   }
   &:after{
     content: '';
-    background: #4338c1cc;
+    background: $light-blue;
     z-index: 5;
     height: 180px;
     position: absolute;
@@ -187,7 +217,7 @@
     opacity: .5;
   }
   &-title{
-    color: #1d2753;
+    color: $dark-blue;
     margin: 35px 0 20px;
     z-index: 10;
     position: relative;
@@ -219,6 +249,17 @@
     }
   }
 }
+@keyframes pop {
+	0% {
+		transform: scale(1,1);
+	}
+	50% {
+		transform: scale(1.1,1.1);
+	}
+	100% {
+		transform: scale(1,1);
+	}
+}
 .page{
   position: relative;
   &:before{
@@ -228,6 +269,9 @@
     bottom: 20px;
     width: 70px;
     height: 80px;
+  }
+  &:hover {
+    animation: pop .3s 2;
   }
   &-landing{
     &:before{
@@ -246,21 +290,22 @@
   }
 }
 .default__btn{
+  outline: transparent;
   &-landing{
     background-color: #c2c2c2;
-    &:hover{
+    &:hover,&:focus{
       background-color: #afafaf;
     }
   }
   &-сorporate{
-    background-color: #5b43d6;
-    &:hover{
+    background-color: $bg-color;
+    &:hover,&:focus{
       background-color: #452bc7;
     }
   }
   &-marketplace{
     background-color: #ffcb05;
-    &:hover{
+    &:hover,&:focus{
       background-color: #deb000;
     }
   }
@@ -291,7 +336,6 @@
 }
 // end services
 
-
 // start skills
 .skills{
   padding: 100px 0 50px;
@@ -318,7 +362,7 @@
 .skills__inner{
   display: flex;
   justify-content: space-between;
-  background-color: #332179;
+  background-color: $blue;
   border-radius: 4px;
   padding: 30px;
   color: #fff;
@@ -369,7 +413,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    font-family: 'Balsamiq Sans', cursive;
+    @include Balsamiq-Sans;
     font-style: italic;
   }
   &-line{
@@ -430,11 +474,11 @@
 .btn{
     display: inline-block;
     position: relative;
-    border: 1px solid #e55d87;
+    border: 1px solid $pink;
     border-radius: 4px;
     overflow: hidden;
     transition: 1s all ease;
-    color:#9c27b0;
+    color: $purple;
     padding: 15px 30px;
     font-size: 21px;
     line-height: 28px;
@@ -455,7 +499,7 @@
     height: 0;
     transform: translate(-50%,-50%) rotate(-45deg);
   }
-  &:hover{
+  &:hover,&:focus{
     color: #fff;
     &::before{
       height: 370%;
@@ -469,7 +513,7 @@
   transform: translateY(-50%);
   button{
     border: none;
-    background-color: #e55d87;
+    background-color: $pink;
     opacity: 0.5;
     font-size: 0;
     padding: 0;
@@ -484,7 +528,7 @@
 .header-dots .slick-active button{
   opacity: 1;
   border-radius: 3.5px;
-  background-color: #9c27b0;
+  background-color: $purple;
 }
 // end works
 
@@ -517,7 +561,7 @@
     outline: 0;
     margin-bottom: 10px;
     &::placeholder{
-      font-family: 'Balsamiq Sans', cursive;
+      @include Balsamiq-Sans;
     }
   }
   textarea{
@@ -529,7 +573,7 @@
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     margin-bottom: 20px;
     &::placeholder{
-      font-family: 'Balsamiq Sans', cursive;
+      @include Balsamiq-Sans;
     }
   }
   button{
@@ -544,13 +588,13 @@
       background: blueviolet;
     }
     &:focus{
-      border-color: #5b43d6;
+      border-color: $bg-color;
       outline: 0;
-      box-shadow: 0 0 0 2px #5b43d6;
+      box-shadow: 0 0 0 2px $bg-color;
     }
     &:disabled{
       cursor: not-allowed;
-      background: #888888;
+      background: #888;
     }
   }
 }
@@ -559,9 +603,9 @@
   border: none;
   background-color: #ddcdeb;
   &:focus{
-    border-color: #5b43d6;
+    border-color: $bg-color;
     outline: 0;
-    box-shadow: 0 0 0 2px #5b43d6;
+    box-shadow: 0 0 0 2px $bg-color;
   }
 }
 .contact__form-row{
@@ -600,9 +644,9 @@
 }
 
 .jq-checkbox.focused{
-  border-color: #5b43d6;
+  border-color: $bg-color;
   outline: 0;
-  box-shadow: 0 0 0 1px #5b43d6;
+  box-shadow: 0 0 0 1px $bg-color;
 }
 .contact__inner-info{
   display: flex;
@@ -631,9 +675,10 @@
     a{
       color: #000;
       font-size: 24px;
+      outline: transparent;
       line-height: 32px;
       margin-bottom: 20px;
-      &:hover{
+      &:hover,&:focus{
         color: #fff;
         transition: all .5s;
       }

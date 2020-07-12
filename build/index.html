@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Open+Sans:wght@800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/icons/user.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <title>Alex Dyatlov - a web developer</title>
@@ -21,39 +22,46 @@
         </a>
       </div>
       <nav class="menu">
-        <div class="menu__btn">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <svg class="menu__btn btnRotate" viewBox="0 0 100 100" width="80">
+          <path
+                class="line top"
+                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+          <path
+                class="line middle"
+                d="m 30,50 h 40" />
+          <path
+                class="line bottom"
+                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+        </svg>
+        
         <ul class="menu__list">
-          <li>
-            <a href="#">
+          <li class="menu__list-link active">
+            <a class="home" href="#">
               Главная
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="menu__list-link">
+            <a class="about" href="#">
               Обо мне
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="menu__list-link">
+            <a class="attendance" href="#">
               Услуги
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="menu__list-link">
+            <a class="attainments" href="#">
               Навыки
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="menu__list-link">
+            <a class="portfolio" href="#">
               Работы
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="menu__list-link">
+            <a class="contacts" href="#">
               Контакты
             </a>
           </li>
@@ -61,7 +69,7 @@
       </nav>
     </div>
     <div class="header__info-box">
-      <div class="header__info">
+      <div class="header__info" data-aos="fade-right">
         <h1 class="header__info-title">
           Привет, я <a href="https://vk.com/id168356073">Саша</a>
         </h1>
@@ -69,14 +77,14 @@
           Junior веб разработчик
         </div>
       </div>
-      <div class="header__info-img">
+      <div class="header__info-img" data-aos="fade-left" data-aos-delay="400">
         <img src="img/home-right.png" alt="">
       </div>
     </div>
   </div>
 </header>
   <!-- WRITE CODE HERE -->
-  <section class="about-me">
+  <section class="about-me" data-aos="zoom-in-up">
     <div class="container">
       <div class="about-item">
         <div class="about-item__img">
@@ -93,7 +101,7 @@
   </section>
   <section class="services">
     <div class="container">
-      <div class="services__title title">
+      <div class="services__title title" data-aos="zoom-in-up" data-aos-delay="200">
         Услуги
       </div>
       <div class="services__top">
@@ -106,23 +114,23 @@
           готовому макету от веб-дизайнера.
         </div>
         <div class="services__top-btn">
-          <a href="#">Заказать вёрстку</a>
+          <a id="btn-order" href="#">Заказать вёрстку</a>
         </div>
       </div>
       <div class="services__items">
-        <div class="services__item services__item--landing">
+        <div class="services__item services__item--landing" data-aos="fade-up" data-aos-delay="200">
           <div class="services__item-title">
             <span class="page page-landing">Вёрстка</span> Лендинг пейджа
           </div>
           <div class="services__item-text">
-            Лендинг пейдж — это, как правило, одностраничный сайт, на котором кратко и емко представлена информация об
+            Лендинг пейдж — это, как правило, одностраничный сайт, на котором кратко и ёмко представлена информация об
             услуге или товаре, что позволяет повысить эффективность рекламы.
           </div>
           <div class="services__item-btn">
             <a class="default__btn default__btn-landing" href="mailto:alexdyatlov.web@gmail.com">Заказать</a>
           </div>
         </div>
-        <div class="services__item services__item--сorporate">
+        <div class="services__item services__item--сorporate" data-aos="fade-up" data-aos-delay="450">
           <div class="services__item-title">
             <span class="page page-сorporate">Вёрстка</span> Корпоративного сайта
           </div>
@@ -135,7 +143,7 @@
             <a class="default__btn default__btn-сorporate" href="mailto:alexdyatlov.web@gmail.com">Заказать</a>
           </div>
         </div>
-        <div class="services__item services__item--marketplace">
+        <div class="services__item services__item--marketplace" data-aos="fade-up" data-aos-delay="650">
           <div class="services__item-title">
             <span class="page page-marketplace">Вёрстка</span> Маркетплейса или интернет-магазина
           </div>
@@ -152,7 +160,7 @@
   </section>
   <section class="skills">
     <div class="container">
-      <div class="skills__title section-title">
+      <div class="skills__title section-title" data-aos="zoom-in-down">
         Навыки
       </div>
       <div class="skills__top">
@@ -169,7 +177,7 @@
       </div>
       <div class="skills__inner-content">
         <div class="skills__inner">
-          <div class="skills__col">
+          <div class="skills__col skills__col--active">
             <ul class="skills__col-title">
               Языки:
             </ul>
@@ -216,7 +224,7 @@
         <div class="skills-box__title title">
           Навыки:
         </div>
-        <div class="skills-box__item">
+        <div class="skills-box__item" data-aos="fade-right" data-aos-delay="200">
           <div class="skills-box__item-head">
             <div class="skills-box__item-name">
               HTML5
@@ -229,7 +237,7 @@
             <span style="max-width: 90%;"></span>
           </div>
         </div>
-        <div class="skills-box__item">
+        <div class="skills-box__item" data-aos="fade-left" data-aos-delay="300">
           <div class="skills-box__item-head">
             <div class="skills-box__item-name">
               CSS3
@@ -242,7 +250,7 @@
             <span style="max-width: 70%;"></span>
           </div>
         </div>
-        <div class="skills-box__item">
+        <div class="skills-box__item" data-aos="fade-right" data-aos-delay="400">
           <div class="skills-box__item-head">
             <div class="skills-box__item-name">
               JavaScript (jQuery)
@@ -255,7 +263,7 @@
             <span style="max-width: 60%;"></span>
           </div>
         </div>
-        <div class="skills-box__item">
+        <div class="skills-box__item" data-aos="fade-left" data-aos-delay="450">
           <div class="skills-box__item-head">
             <div class="skills-box__item-name">
               Soft skills
@@ -273,7 +281,7 @@
   </section>
   <section class="works">
     <div class="container">
-      <div class="works__title section-title">
+      <div class="works__title section-title" data-aos="zoom-in" data-aos-delay="200">
         Работы
       </div>
       <div class="works__text title">
@@ -387,11 +395,11 @@
   <footer class="footer">
   <div class="footer__content">
     <div class="container">
-      <div class="footer__title section-title">
+      <div class="footer__title section-title" data-aos="zoom-in-down">
         Контакты
       </div>
       <div class="contact__inner-info">
-        <div class="contact__form">
+        <div class="contact__form" data-aos="fade-right" data-aos-delay="400">
           <div class="footer__text title">
             Давайте работать вместе.
           </div>
@@ -414,23 +422,36 @@
           </form>
         </div>
         <div class="contact__social">
-          <div class="contact__social-title">
+          <div class="contact__social-title" data-aos="zoom-in-left" data-aos-delay="150">
             Мои социальные сети:
           </div>
           <ul class="contact__social-link">
-            <li class="link link-vk"><a href="https://vk.com/id168356073">ВКонтакте</a></li>
-            <li class="link link-telegram"><a href="https://t.me/bsbhahs">Telegram</a></li>
-            <li class="link link-instagram"> <a href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a></li>
-            <li class="link link-linkedin"><a href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
+            <li class="link link-vk" data-aos="fade-up" data-aos-delay="200">
+              <a href="https://vk.com/id168356073">ВКонтакте</a>
             </li>
-            <li class="link link-github"><a href="https://github.com/AlexDyatlov">GitHub</a></li>
+            <li class="link link-telegram" data-aos="fade-up" data-aos-delay="250">
+              <a href="https://t.me/bsbhahs">Telegram</a>
+            </li>
+            <li class="link link-instagram" data-aos="fade-up" data-aos-delay="300">
+              <a href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a>
+            </li>
+            <li class="link link-linkedin" data-aos="fade-up" data-aos-delay="350">
+              <a href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
+            </li>
+            <li class="link link-github" data-aos="fade-up" data-aos-delay="400">
+              <a href="https://github.com/AlexDyatlov">GitHub</a>
+            </li>
           </ul>
-          <div class="contact__social-description">
+          <div class="contact__social-description" data-aos="zoom-in-left" data-aos-delay="250">
             Всегда на связи:
           </div>
-          <ul class="contact__social-link">
-            <li class="link link-email"><a href="mailto:alexdyatlov.web@gmail.com">alexdyatlov.web@gmail.com</a></li>
-            <li class="link link-phone"><a href="tel:79291029246">+7 (929) 102-92-46</a></li>
+          <ul class="contact__social-link" data-aos="fade-left">
+            <li class="link link-email">
+              <a href="mailto:alexdyatlov.web@gmail.com">alexdyatlov.web@gmail.com</a>
+            </li>
+            <li class="link link-phone">
+              <a href="tel:79291029246">+7 (929) 102-92-46</a>
+            </li>
           </ul>
         </div>
       </div>

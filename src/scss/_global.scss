@@ -41,8 +41,7 @@ input:focus {
 }
 
 body{
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  @include f400;
   font-size: 18px;
   line-height: 26px;
   color: #000;

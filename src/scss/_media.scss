@@ -30,19 +30,24 @@
   .menu__list{
     display: none;
     position: absolute;
+    z-index: 5;
     top: 140px;
     left: 0;
+    height: 540px;
     right: 0;
     text-align: center;
-    background-color: #000;
+    background: linear-gradient(90deg,#8a5bad 0,#8a5bad 0,#ccbcda 100%,#8a5bad 100%);
     a{
       display: block;
       color: transparent;
-      -webkit-text-stroke: 1px #fff;
+      -webkit-text-stroke: 1px $blue;
       font-size: 30px;
       line-height: 38px;
       padding: 17px 0;
       border-bottom: 1px solid #fff;
+      &:before{
+        position: static;
+      }
     }
     li{
       display: block;
@@ -54,17 +59,56 @@
       }
     }
   }
-  .menu__btn{
+  // start burger menu
+  .menu__btn {
     display: block;
-    width: 30px;
-    div{
-      background-color: #fff;
-      height: 3px;
-      & + div{
-        margin-top: 6px;
-      }
-    }
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
+  .btnRotate.active {
+    transform: rotate(45deg);
+  }
+  .btnRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: $text-color;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+  
+  .menu__btn .top {
+    stroke-dasharray: 40 160;
+  }
+  .menu__btn .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+  }
+  .menu__btn .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+  }
+  .menu__btn.active .top {
+    stroke-dashoffset: -64px;
+    stroke: $blue;
+  }
+  .menu__btn.active .middle {
+    transform: rotate(90deg);
+    stroke: $blue;
+  }
+  .menu__btn.active .bottom {
+    stroke-dashoffset: -64px;
+    stroke: $blue;
+  }
+// end burger menu
   .header__info-box{
     align-items: flex-start;
   }
