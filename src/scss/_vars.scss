@@ -1,0 +1,16 @@
+$bg-color: #5b43d6;
+$purple: #9c27b0;
+$pink: #e55d87;
+$text-color: #e0e0e9;
+$blue: #332179;
+$dark-blue: #1d2753;
+$light-blue: #4338c1cc;
+
+@mixin f400{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+@mixin Balsamiq-Sans{
+  font-family: 'Balsamiq Sans', cursive;
+}

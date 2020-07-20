@@ -4,20 +4,470 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Open+Sans:wght@800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/icons/user.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-    <title>Document</title>
+    <title>Alex Dyatlov - a web developer</title>
   </head>
 
 <body>
-  <header>
-
+  <header id="home" class="header">
+  <div class="container">
+    <div class="header__inner">
+      <div class="header__logo">
+        <a class="header__logo-box" href="#">
+          <img src="img/logo.svg" alt="">
+          <span>Alexandr Dyatlov</span>
+        </a>
+      </div>
+      <nav class="menu">
+        <svg class="menu__btn btnRotate" viewBox="0 0 100 100" width="80">
+          <path
+                class="line top"
+                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+          <path
+                class="line middle"
+                d="m 30,50 h 40" />
+          <path
+                class="line bottom"
+                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+        </svg>
+        <ul class="menu__list">
+          <li class="menu__list-link active">
+            <a class="home" href="#home">
+              Главная
+            </a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#about">
+              Обо мне
+            </a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#attendance">
+              Услуги
+            </a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#attainments">
+              Навыки
+            </a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#portfolio">
+              Работы
+            </a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#contacts">
+              Контакты
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__info-box">
+      <div class="header__info" data-aos="fade-right">
+        <h1 class="header__info-title">
+          Привет, я <a href="https://vk.com/id168356073">Саша</a>
+        </h1>
+        <div class="header__info-text">
+          Junior веб разработчик
+        </div>
+      </div>
+      <div class="header__info-img" data-aos="fade-left" data-aos-delay="400">
+        <img src="img/home-right.png" alt="">
+      </div>
+    </div>
+  </div>
 </header>
   <!-- WRITE CODE HERE -->
-
-
+  <section id="about" class="about-me" data-aos="zoom-in-up">
+    <div class="container">
+      <div class="about-item">
+        <div class="about-item__img">
+          <img src="img/logo.svg" alt="">
+        </div>
+        <div class="about-item__text">
+          <p>Меня зовут Александр Дятлов, я являюсь сертифицированным веб-разработчиком. Мне 19 лет, студент, живу в
+            Санкт-Петербурге, обожаю спорт, плавание, сейчас всё свободное время занимаюсь вёрсткой сайтов и стараюсь
+            развиваться в этом направлении.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="attendance" class="services">
+    <div class="container">
+      <div class="services__title title" data-aos="zoom-in-up" data-aos-delay="200">
+        Услуги
+      </div>
+      <div class="services__top">
+        <div class="services__top-text title">
+          В мои услуги входит вёрстка сайтов.
+        </div>
+        <div class="services__top-description">
+          Вёрстка сайтов – это процесс создания веб-страницы (страницы сайта) с использованием специальной разметки и
+          программного кода. Простыми словами – это визуализация графического оформления сайта, которая выполняется по
+          готовому макету от веб-дизайнера.
+        </div>
+        <div class="services__top-btn">
+          <a class="services__btn" href="#contacts">Заказать вёрстку</a>
+        </div>
+      </div>
+      <div class="services__items">
+        <div class="services__item services__item--landing" data-aos="fade-up" data-aos-delay="200">
+          <div class="services__item-title">
+            <span class="page page-landing">Вёрстка</span> Лендинг пейджа
+          </div>
+          <div class="services__item-text">
+            Лендинг пейдж — это, как правило, одностраничный сайт, на котором кратко и ёмко представлена информация об
+            услуге или товаре, что позволяет повысить эффективность рекламы.
+          </div>
+          <div class="services__item-btn">
+            <a class="default__btn default__btn-landing" href="mailto:alexdyatlov.web@gmail.com">Заказать</a>
+          </div>
+        </div>
+        <div class="services__item services__item--сorporate" data-aos="fade-up" data-aos-delay="450">
+          <div class="services__item-title">
+            <span class="page page-сorporate">Вёрстка</span> Корпоративного сайта
+          </div>
+          <div class="services__item-text">
+            Корпоративный сайт — это интернет-ресурс, на котором представлена подробная информация о деятельности
+            организации или предприятия: услуги, сервисы, новости и прочие факты и события, отражающие деятельность
+            компании.
+          </div>
+          <div class="services__item-btn">
+            <a class="default__btn default__btn-сorporate" href="mailto:alexdyatlov.web@gmail.com">Заказать</a>
+          </div>
+        </div>
+        <div class="services__item services__item--marketplace" data-aos="fade-up" data-aos-delay="650">
+          <div class="services__item-title">
+            <span class="page page-marketplace">Вёрстка</span> Маркетплейса или интернет-магазина
+          </div>
+          <div class="services__item-text">
+            Маркетплейс — это платформа электронной коммерции, онлайн-магазин электронной торговли, предоставляющий
+            информацию о продукте или услуге третьих лиц, чьи операции обрабатываются оператором маркетплейса.
+          </div>
+          <div class="services__item-btn">
+            <a class="default__btn default__btn-marketplace" href="mailto:alexdyatlov.web@gmail.com">Заказать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="attainments" class="skills">
+    <div class="container">
+      <div class="skills__title section-title" data-aos="zoom-in-down">
+        Навыки
+      </div>
+      <div class="skills__top">
+        <div class="skills__top-text title">
+          Мои навыки и умения.
+        </div>
+        <div class="skills__top-description">
+          <p>Мне нравится создавать привлекательные веб-сайты, которые бывают быстрыми, простыми в использовании для пользователей и выполнены точно по дизайну. Я могу внести правки на сайте, создать сайт или расширить существующий проект.
+          </p>
+          <p>
+            Вот подборка современных технологий, с которыми я работаю:
+          </p>
+        </div>
+      </div>
+      <div class="skills__inner-content">
+        <div class="skills__inner">
+          <div class="skills__col skills__col--active">
+            <div class="skills__col-title">
+              Языки:
+            </div>
+            <ul class="skills__col-list">
+              <li><a href="https://developer.mozilla.org/ru/docs/Web/HTML">HTML5</a></li>
+              <li><a href="https://developer.mozilla.org/ru/docs/Web/Guide/CSS/Getting_started/What_is_CSS">CSS3</a></li>
+              <li><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/What_is_JavaScript">JavaScript</a></li>
+            </ul>
+          </div>
+          <div class="skills__col">
+            <div class="skills__col-title">
+              Методы и инструменты:
+            </div>
+            <ul class="skills__col-list">
+              <li><a href="https://ru.bem.info/methodology/">БЭМ</a></li>
+              <li><a href="https://sass-scss.ru/guide/">SCSS/SASS</a></li>
+              <li><a href="https://www.site-do.ru/js/jquery1.php">jQuery</a></li>
+              <li><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">Flex и Grid</a></li>
+              <li><a href="https://gulpjs.com/">Gulp</a></li>
+              <li><a href="https://tproger.ru/translations/difference-between-git-and-github/">Git и GitHub</a></li>
+              <li><a href="https://www.hostinger.ru/rukovodstva/chto-takoe-npm/">npm</a></li>
+            </ul>
+          </div>
+          <div class="skills__col">
+            <div class="skills__col-title">
+              Дополнительно:
+            </div>
+            <ul class="skills__col-list">
+              <li><a href="https://msiter.ru/tutorials/html5/semantic_elements">Семантика</a></li>
+              <li><a href="https://redline.by/novosti/krossbrauzernyij-kod.html">Кроссбраузерность</a></li>
+              <li><a href="https://developer.mozilla.org/ru/docs/Learn/%D0%94%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE%D1%81%D1%82%D1%8C/What_is_accessibility">Доступность</a></li>
+              <li><a href="https://tproger.ru/translations/responsive-web-design-tips/">Адаптивная вёрстка</a></li>
+              <li><a href="https://skillbox.ru/media/design/chto_takoe_figma/">Photoshop, Figma, Zeplin</a></li>
+              <li><a href="https://cutt.ly/ipGBhir">Pixel Perfect</a></li>
+              <li><a href="https://habr.com/ru/post/269419/">Mobile First</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="skills-man">
+          <img src="img/skills-bg.svg" alt="">
+        </div>
+      </div>
+      <div class="skills-box__items">
+        <div class="skills-box__title title">
+          Навыки:
+        </div>
+        <div class="skills-box__item" data-aos="fade-right" data-aos-delay="200">
+          <div class="skills-box__item-head">
+            <div class="skills-box__item-name">
+              HTML5
+            </div>
+            <div class="skills-box__item-number">
+              90%
+            </div>
+          </div>
+          <div class="skills-box__item-line">
+            <span style="max-width: 90%;"></span>
+          </div>
+        </div>
+        <div class="skills-box__item" data-aos="fade-left" data-aos-delay="300">
+          <div class="skills-box__item-head">
+            <div class="skills-box__item-name">
+              CSS3
+            </div>
+            <div class="skills-box__item-number">
+              70%
+            </div>
+          </div>
+          <div class="skills-box__item-line">
+            <span style="max-width: 70%;"></span>
+          </div>
+        </div>
+        <div class="skills-box__item" data-aos="fade-right" data-aos-delay="400">
+          <div class="skills-box__item-head">
+            <div class="skills-box__item-name">
+              JavaScript (jQuery)
+            </div>
+            <div class="skills-box__item-number">
+              60%
+            </div>
+          </div>
+          <div class="skills-box__item-line">
+            <span style="max-width: 60%;"></span>
+          </div>
+        </div>
+        <div class="skills-box__item" data-aos="fade-left" data-aos-delay="450">
+          <div class="skills-box__item-head">
+            <div class="skills-box__item-name">
+              Soft skills
+            </div>
+            <div class="skills-box__item-number">
+              90%
+            </div>
+          </div>
+          <div class="skills-box__item-line">
+            <span style="max-width: 90%;"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" class="works">
+    <div class="container">
+      <div class="works__title section-title" data-aos="zoom-in" data-aos-delay="200">
+        Работы
+      </div>
+      <div class="works__text title">
+        Здесь представлены мои работы.
+      </div>
+      <div class="works__slider">
+        <div class="works__slider-item">
+          <div class="work__content">
+            <div class="work__content-img">
+              <img src="img/macfood.jpg" alt="">
+            </div>
+            <div class="work__info">
+              <div class="work__info-title">
+                Healthy Food
+              </div>
+              <div class="work__info-text">
+                Сервиc по доставке готовых блюд на дом.
+              </div>
+              <div class="work__info-btn">
+                <a class="btn work-btn" href="/works/HealthyFood">
+                  Посетить сайт
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="works__slider-item">
+          <div class="work__content">
+            <div class="work__content-img">
+              <img src="img/shelter.jpg" alt="">
+            </div>
+            <div class="work__info">
+              <div class="work__info-title">
+                Уютный дом
+              </div>
+              <div class="work__info-text">
+                Сайт некоммерческой организации для помощи животным.
+              </div>
+              <div class="work__info-btn">
+                <a class="btn work-btn" href="/works/CozyHouse">
+                  Посетить сайт
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="works__slider-item">
+          <div class="work__content">
+            <div class="work__content-img">
+              <img src="img/design.jpg" alt="">
+            </div>
+            <div class="work__info">
+              <div class="work__info-title">
+                Design Agency
+              </div>
+              <div class="work__info-text">
+                Агентство оказывающее услуги в области брендинга и дизайна.
+              </div>
+              <div class="work__info-btn">
+                <a class="btn work-btn" href="/works/DesignAgency">
+                  Посетить сайт
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="works__slider-item">
+          <div class="work__content">
+            <div class="work__content-img">
+              <img src="img/besttravel.jpg" alt="">
+            </div>
+            <div class="work__info">
+              <div class="work__info-title">
+                Best Travel
+              </div>
+              <div class="work__info-text">
+                Сервис для поиска и бронирования туров онлайн.
+              </div>
+              <div class="work__info-btn">
+                <a class="btn work-btn" href="/works/BestTravel">
+                  Посетить сайт
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="works__slider-item">
+          <div class="work__content">
+            <div class="work__content-img">
+              <img src="img/audiru.jpg" alt="">
+            </div>
+            <div class="work__info">
+              <div class="work__info-title">
+                Audi R8
+              </div>
+              <div class="work__info-text">
+                Сайт официального дилера Audi R8.
+              </div>
+              <div class="work__info-btn">
+                <a class="btn work-btn" href="/works/Audi">
+                  Посетить сайт
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- STOP WRITE CODE -->
-  <footer>
-  
+  <footer id="contacts" class="footer">
+  <div class="footer__content">
+    <div class="container">
+      <div class="footer__title section-title" data-aos="zoom-in-down">
+        Контакты
+      </div>
+      <div class="contact__inner-info">
+        <div class="contact__form" data-aos="fade-right" data-aos-delay="400">
+          <div class="footer__text title">
+            Давайте работать вместе.
+          </div>
+          <div class="contact__form-text">
+            Есть проект, который вы хотели бы обсудить?
+          </div>
+          <form>
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="AlexDyatlov">
+            <input type="hidden" name="admin_email" value="alexdyatlov.web@gmail.com">
+            <input type="hidden" name="form_subject" value="form footer">
+            <!-- END Hidden Required Fields -->
+            <div class="contact__form-row">
+              <input name="Имя" class="form-contact" type="text" placeholder="Имя" required>
+              <input name="e-mail" class="form-contact" type="email" placeholder="Email" required>
+            </div>
+            <textarea name="Сообщение" class="form-contact" placeholder="Сообщение" required></textarea>
+            <div class="contact__form-politics">
+              <input type="checkbox" id="checkbox">
+              <div class="politics-desc">
+                Я принимаю условия политики конфиденциальности и даю согласие на обработку персональных данных.
+              </div>
+            </div>
+            <button type="submit" name="send-sms" disabled="disabled" id="send-sms">Отправить</button>
+          </form>
+        </div>
+        <div class="contact__social">
+          <div class="contact__social-title" data-aos="zoom-in-left" data-aos-delay="150">
+            Мои социальные сети:
+          </div>
+          <ul class="contact__social-link">
+            <li class="link link-vk" data-aos="fade-up" data-aos-delay="200">
+              <a href="https://vk.com/id168356073">ВКонтакте</a>
+            </li>
+            <li class="link link-telegram" data-aos="fade-up" data-aos-delay="250">
+              <a href="https://t.me/bsbhahs">Telegram</a>
+            </li>
+            <li class="link link-instagram" data-aos="fade-up" data-aos-delay="300">
+              <a href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a>
+            </li>
+            <li class="link link-linkedin" data-aos="fade-up" data-aos-delay="350">
+              <a href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
+            </li>
+            <li class="link link-github" data-aos="fade-up" data-aos-delay="400">
+              <a href="https://github.com/AlexDyatlov">GitHub</a>
+            </li>
+          </ul>
+          <div class="contact__social-description" data-aos="zoom-in-left" data-aos-delay="250">
+            Всегда на связи:
+          </div>
+          <ul class="contact__social-link" data-aos="fade-left">
+            <li class="link link-email">
+              <a href="mailto:alexdyatlov.web@gmail.com">alexdyatlov.web@gmail.com</a>
+            </li>
+            <li class="link link-phone">
+              <a href="tel:79291029246">+7 (929) 102-92-46</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copy">
+    <div class="container">
+      <div class="footer__copy-text">
+        © 2020 Alex Dyatlov. Все права защищены.
+      </div>
+    </div>
+  </div>
 </footer>
   <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>

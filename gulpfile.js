@@ -93,6 +93,9 @@ gulp.task("style", function () {
 		.src([
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
+			"node_modules/slick-carousel/slick/slick.css",
+			"node_modules/jquery-form-styler/dist/jquery.formstyler.css",
+			"node_modules/aos/dist/aos.css"
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -108,6 +111,10 @@ gulp.task("script", function () {
 		.src([
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
+			"node_modules/slick-carousel/slick/slick.min.js",
+			"node_modules/jquery-form-styler/dist/jquery.formstyler.min.js",
+			"node_modules/aos/dist/aos.js",
+			"node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())
@@ -308,7 +315,7 @@ gulp.task("browser-sync", function () {
 		browser: ["chrome"], //в каком браузере
 		//tunnel: " ", //тут можно прописать название проекта и дать доступ к нему через интернет. Работает нестабильно, запускается через раз. Не рекомендуется включать без необходимости.
 		//tunnel:true, //работает, как и предыдущяя опция, но присваивает рандомное имя. Тоже запускается через раз и поэтому не рекомендуется для включения
-		host: "192.168.0.104", //IP сервера в локальной сети. Отключите, если у вас DHCP, пропишите под себя, если фиксированный IP в локалке.
+		host: "192.168.0.106", //IP сервера в локальной сети. Отключите, если у вас DHCP, пропишите под себя, если фиксированный IP в локалке.
 	});
 });
 
