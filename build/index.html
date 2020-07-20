@@ -12,7 +12,7 @@
   </head>
 
 <body>
-  <header class="header">
+  <header id="home" class="header">
   <div class="container">
     <div class="header__inner">
       <div class="header__logo">
@@ -33,35 +33,34 @@
                 class="line bottom"
                 d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
         </svg>
-        
         <ul class="menu__list">
           <li class="menu__list-link active">
-            <a class="home" href="#">
+            <a class="home" href="#home">
               Главная
             </a>
           </li>
-          <li class="menu__list-link">
-            <a class="about" href="#">
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#about">
               Обо мне
             </a>
           </li>
-          <li class="menu__list-link">
-            <a class="attendance" href="#">
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#attendance">
               Услуги
             </a>
           </li>
-          <li class="menu__list-link">
-            <a class="attainments" href="#">
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#attainments">
               Навыки
             </a>
           </li>
-          <li class="menu__list-link">
-            <a class="portfolio" href="#">
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#portfolio">
               Работы
             </a>
           </li>
-          <li class="menu__list-link">
-            <a class="contacts" href="#">
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#contacts">
               Контакты
             </a>
           </li>
@@ -84,7 +83,7 @@
   </div>
 </header>
   <!-- WRITE CODE HERE -->
-  <section class="about-me" data-aos="zoom-in-up">
+  <section id="about" class="about-me" data-aos="zoom-in-up">
     <div class="container">
       <div class="about-item">
         <div class="about-item__img">
@@ -99,7 +98,7 @@
       </div>
     </div>
   </section>
-  <section class="services">
+  <section id="attendance" class="services">
     <div class="container">
       <div class="services__title title" data-aos="zoom-in-up" data-aos-delay="200">
         Услуги
@@ -114,7 +113,7 @@
           готовому макету от веб-дизайнера.
         </div>
         <div class="services__top-btn">
-          <a id="btn-order" href="#">Заказать вёрстку</a>
+          <a class="services__btn" href="#contacts">Заказать вёрстку</a>
         </div>
       </div>
       <div class="services__items">
@@ -158,7 +157,7 @@
       </div>
     </div>
   </section>
-  <section class="skills">
+  <section id="attainments" class="skills">
     <div class="container">
       <div class="skills__title section-title" data-aos="zoom-in-down">
         Навыки
@@ -178,27 +177,27 @@
       <div class="skills__inner-content">
         <div class="skills__inner">
           <div class="skills__col skills__col--active">
-            <ul class="skills__col-title">
+            <div class="skills__col-title">
               Языки:
-            </ul>
-            <div class="skills__col-list">
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
             </div>
+            <ul class="skills__col-list">
+              <li><a href="https://developer.mozilla.org/ru/docs/Web/HTML">HTML5</a></li>
+              <li><a href="https://developer.mozilla.org/ru/docs/Web/Guide/CSS/Getting_started/What_is_CSS">CSS3</a></li>
+              <li><a href="https://developer.mozilla.org/ru/docs/Learn/JavaScript/%D0%9F%D0%B5%D1%80%D0%B2%D1%8B%D0%B5_%D1%88%D0%B0%D0%B3%D0%B8/What_is_JavaScript">JavaScript</a></li>
+            </ul>
           </div>
           <div class="skills__col">
             <div class="skills__col-title">
               Методы и инструменты:
             </div>
             <ul class="skills__col-list">
-              <li>БЭМ</li>
-              <li>SCSS/SASS</li>
-              <li>jQuery</li>
-              <li>Flex и Grid</li>
-              <li>Gulp</li>
-              <li>Git и GitHub</li>
-              <li>npm</li>
+              <li><a href="https://ru.bem.info/methodology/">БЭМ</a></li>
+              <li><a href="https://sass-scss.ru/guide/">SCSS/SASS</a></li>
+              <li><a href="https://www.site-do.ru/js/jquery1.php">jQuery</a></li>
+              <li><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">Flex и Grid</a></li>
+              <li><a href="https://gulpjs.com/">Gulp</a></li>
+              <li><a href="https://tproger.ru/translations/difference-between-git-and-github/">Git и GitHub</a></li>
+              <li><a href="https://www.hostinger.ru/rukovodstva/chto-takoe-npm/">npm</a></li>
             </ul>
           </div>
           <div class="skills__col">
@@ -206,13 +205,13 @@
               Дополнительно:
             </div>
             <ul class="skills__col-list">
-              <li>Семантика</li>
-              <li>Кроссбраузерность</li>
-              <li>Доступность</li>
-              <li>Адаптивная вёрстка</li>
-              <li>Photoshop, Figma, Zeplin</li>
-              <li>Pixel Perfect</li>
-              <li>Mobile First</li>
+              <li><a href="https://msiter.ru/tutorials/html5/semantic_elements">Семантика</a></li>
+              <li><a href="https://redline.by/novosti/krossbrauzernyij-kod.html">Кроссбраузерность</a></li>
+              <li><a href="https://developer.mozilla.org/ru/docs/Learn/%D0%94%D0%BE%D1%81%D1%82%D1%83%D0%BF%D0%BD%D0%BE%D1%81%D1%82%D1%8C/What_is_accessibility">Доступность</a></li>
+              <li><a href="https://tproger.ru/translations/responsive-web-design-tips/">Адаптивная вёрстка</a></li>
+              <li><a href="https://skillbox.ru/media/design/chto_takoe_figma/">Photoshop, Figma, Zeplin</a></li>
+              <li><a href="https://cutt.ly/ipGBhir">Pixel Perfect</a></li>
+              <li><a href="https://habr.com/ru/post/269419/">Mobile First</a></li>
             </ul>
           </div>
         </div>
@@ -279,7 +278,7 @@
       </div>
     </div>
   </section>
-  <section class="works">
+  <section id="portfolio" class="works">
     <div class="container">
       <div class="works__title section-title" data-aos="zoom-in" data-aos-delay="200">
         Работы
@@ -301,7 +300,7 @@
                 Сервиc по доставке готовых блюд на дом.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="#">
+                <a class="btn work-btn" href="/works/HealthyFood">
                   Посетить сайт
                 </a>
               </div>
@@ -321,7 +320,7 @@
                 Сайт некоммерческой организации для помощи животным.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="#">
+                <a class="btn work-btn" href="/works/CozyHouse">
                   Посетить сайт
                 </a>
               </div>
@@ -341,7 +340,7 @@
                 Агентство оказывающее услуги в области брендинга и дизайна.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="#">
+                <a class="btn work-btn" href="/works/DesignAgency">
                   Посетить сайт
                 </a>
               </div>
@@ -361,7 +360,7 @@
                 Сервис для поиска и бронирования туров онлайн.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="#">
+                <a class="btn work-btn" href="/works/BestTravel">
                   Посетить сайт
                 </a>
               </div>
@@ -381,7 +380,7 @@
                 Сайт официального дилера Audi R8.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="#">
+                <a class="btn work-btn" href="/works/Audi">
                   Посетить сайт
                 </a>
               </div>
@@ -392,7 +391,7 @@
     </div>
   </section>
   <!-- STOP WRITE CODE -->
-  <footer class="footer">
+  <footer id="contacts" class="footer">
   <div class="footer__content">
     <div class="container">
       <div class="footer__title section-title" data-aos="zoom-in-down">
@@ -407,11 +406,16 @@
             Есть проект, который вы хотели бы обсудить?
           </div>
           <form>
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="AlexDyatlov">
+            <input type="hidden" name="admin_email" value="alexdyatlov.web@gmail.com">
+            <input type="hidden" name="form_subject" value="form footer">
+            <!-- END Hidden Required Fields -->
             <div class="contact__form-row">
-              <input class="form-contact" type="text" placeholder="Имя" required>
-              <input class="form-contact" type="email" placeholder="Email" required>
+              <input name="Имя" class="form-contact" type="text" placeholder="Имя" required>
+              <input name="e-mail" class="form-contact" type="email" placeholder="Email" required>
             </div>
-            <textarea class="form-contact" placeholder="Сообщение" required></textarea>
+            <textarea name="Сообщение" class="form-contact" placeholder="Сообщение" required></textarea>
             <div class="contact__form-politics">
               <input type="checkbox" id="checkbox">
               <div class="politics-desc">

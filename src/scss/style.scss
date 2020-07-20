@@ -349,6 +349,7 @@
 .skills__top{
   margin-bottom: 40px;
   &-description{
+    max-width: 725px;
     p{
       margin-bottom: 10px;
     }
@@ -379,7 +380,7 @@
     margin-bottom: 20px;
   }
   &-list{
-    li{
+      a{
       color: #b7c3c8;
       position: relative;
       margin-bottom: 10px;

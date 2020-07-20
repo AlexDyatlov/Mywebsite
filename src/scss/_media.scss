@@ -10,6 +10,9 @@
       width: 100%;
     }
   }
+  .skills__top-description{
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1200px){
@@ -33,7 +36,7 @@
     z-index: 5;
     top: 140px;
     left: 0;
-    height: 540px;
+    height: 580px;
     right: 0;
     text-align: center;
     background: linear-gradient(90deg,#8a5bad 0,#8a5bad 0,#ccbcda 100%,#8a5bad 100%);

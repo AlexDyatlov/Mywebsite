@@ -113,7 +113,8 @@ gulp.task("script", function () {
 			"node_modules/jquery/dist/jquery.js",
 			"node_modules/slick-carousel/slick/slick.min.js",
 			"node_modules/jquery-form-styler/dist/jquery.formstyler.min.js",
-			"node_modules/aos/dist/aos.js"
+			"node_modules/aos/dist/aos.js",
+			"node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())

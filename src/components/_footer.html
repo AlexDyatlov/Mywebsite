@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer id="contacts" class="footer">
   <div class="footer__content">
     <div class="container">
       <div class="footer__title section-title" data-aos="zoom-in-down">
@@ -13,11 +13,16 @@
             Есть проект, который вы хотели бы обсудить?
           </div>
           <form>
+            <!-- Hidden Required Fields -->
+            <input type="hidden" name="project_name" value="AlexDyatlov">
+            <input type="hidden" name="admin_email" value="alexdyatlov.web@gmail.com">
+            <input type="hidden" name="form_subject" value="form footer">
+            <!-- END Hidden Required Fields -->
             <div class="contact__form-row">
-              <input class="form-contact" type="text" placeholder="Имя" required>
-              <input class="form-contact" type="email" placeholder="Email" required>
+              <input name="Имя" class="form-contact" type="text" placeholder="Имя" required>
+              <input name="e-mail" class="form-contact" type="email" placeholder="Email" required>
             </div>
-            <textarea class="form-contact" placeholder="Сообщение" required></textarea>
+            <textarea name="Сообщение" class="form-contact" placeholder="Сообщение" required></textarea>
             <div class="contact__form-politics">
               <input type="checkbox" id="checkbox">
               <div class="politics-desc">
