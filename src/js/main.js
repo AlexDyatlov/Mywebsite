@@ -96,3 +96,10 @@ var scroll = new SmoothScroll('a[href*="#"]',{
   speed: 700,
   speedAsDuration: true
 });
+
+  window.onload = function () {
+    let preloader = document.getElementById('preloader');
+    setTimeout(function(){
+    preloader.style.display = 'none';
+  },500);
+}
