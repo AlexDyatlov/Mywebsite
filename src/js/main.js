@@ -39,7 +39,6 @@ $(function(){
     else{
       sendbtn.disabled = true;
     }
-    
   }
 
   $('.menu__btn').on('click', function(){
@@ -48,19 +47,20 @@ $(function(){
     });
   });
 
-  let ul = document.querySelector('ul');
-  let li = document.querySelectorAll('li');
+  let ul = document.querySelector('.menu__list');
+  let li = document.querySelectorAll('.menu__list-item');
 
   li.forEach(el => {
     el.addEventListener('click', function(){
-      ul.querySelector('.active').classList.
-          remove('active');
+      ul.querySelector('.active-item').classList.
+          remove('active-item');
 
-          el.classList.add('active');
+          el.classList.add('active-item');
     });
   });
 
   AOS.init({
+    once: true,
     delay: 300,
     duration: 1000
   });
