@@ -72,7 +72,7 @@
         }
       }
     }
-    li.active a{
+    li.active-item a{
       color: $blue;
       &:before {
         width: 100%;
@@ -148,10 +148,6 @@
   background: linear-gradient(to bottom,#7a19f1,#332179);
   background-attachment: fixed;
   &__title{
-    text-align: center;
-    font-weight: 700;
-    font-size: 30px;
-    margin-bottom: 40px;
     color: #fff;
   }
 }
@@ -339,12 +335,6 @@
 // start skills
 .skills{
   padding: 100px 0 50px;
-  &__title{
-    text-align: center;
-    font-weight: 700;
-    font-size: 30px;
-    margin-bottom: 40px;
-  }
 }
 .skills__top{
   margin-bottom: 40px;
@@ -435,12 +425,6 @@
 // start works
 .works{
   padding: 50px 0 100px;
-  &__title{
-    text-align: center;
-    font-weight: 700;
-    font-size: 30px;
-    margin-bottom: 40px;
-  }
   &__text{
     margin-bottom: 40px;
   }
@@ -514,7 +498,7 @@
   transform: translateY(-50%);
   button{
     border: none;
-    background-color: $pink;
+    background-color: #731ae5;
     opacity: 0.5;
     font-size: 0;
     padding: 0;
@@ -540,12 +524,6 @@
   clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 100%);
   &__content{
     padding: 100px 0 50px;
-  }
-  &__title{
-    text-align: center;
-    font-weight: 700;
-    font-size: 30px;
-    margin-bottom: 40px;
   }
 }
 .contact__form{
@@ -691,71 +669,70 @@
     position: absolute;
     background-repeat: no-repeat;
     content: '';
+    height: 40px;
+    width: 55px;
     left: 0;
   }
 }
 .link-vk{
   &:before{
-    background-image: url(../img/icons/vk.svg);
+    background-image: url('../img/icons/vk.svg');
     height: 36px;
     width: 36px;
   }
 }
 .link-telegram{
   &:before{
-  background-image: url(../img/icons/telegram.svg);
-  height: 40px;
-  width: 55px;
+  background-image: url('../img/icons/telegram.svg');
   left: -12px;
   }
 }
 .link-instagram{
   &:before{
-    background-image: url(../img/icons/instagram.svg);
-    height: 40px;
-    width: 55px;
+    background-image: url('../img/icons/instagram.svg');
     left: -8px;
   }
 }
 .link-linkedin{
   &:before{
-    background-image: url(../img/icons/linkedin.svg);
-    height: 40px;
-    width: 55px;
-  }
-}
-.link-github{
-  &:before{
-    background-image: url(../img/icons/github.svg);
-    height: 40px;
-    width: 55px;
+    background-image: url('../img/icons/linkedin.svg');
   }
 }
 .link-email{
   &:before{
-    position: absolute;
-    content: '';
-    background-image: url(../img/icons/gmail.svg);
-    background-repeat: no-repeat;
+    background: center/cover no-repeat url('../img/icons/gmail.png');
     height: 35px;
     width: 35px;
-    top: -5px;
+    top: -2px;
   }
 }
 .link-phone{
   &:before{
-    background-image: url(../img/icons/phone.svg);
+    background-image: url('../img/icons/phone.svg');
     height: 37px;
     width: 40px;
     bottom: 20px;
   }
 }
-.footer__copy{
+.footer-copy{
   border-top: 1px solid #888;
-}
-.footer__copy-text{
-  text-align: center;
-  padding: 10px 0;
+  &__inner{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  &__link{
+    color: #000;
+    margin-left: 5px;
+    position: relative;
+    &:before{
+      background: center/cover no-repeat url('../img/icons/github.svg');
+      width: 37px;
+      height: 32px;
+      left: 105px;
+      top: -5px;
+    }
+  }
 }
 // end footer
 
@@ -787,44 +764,44 @@
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
-		-o-box-sizing: border-box;
-		-ms-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	border-radius: 50%;
-		-o-border-radius: 50%;
-		-ms-border-radius: 50%;
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;	
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;	
 }
 .cssload-inner.cssload-one {
 	left: 0%;
 	top: 0%;
 	animation: cssload-rotate-one 1.15s linear infinite;
-		-o-animation: cssload-rotate-one 1.15s linear infinite;
-		-ms-animation: cssload-rotate-one 1.15s linear infinite;
-		-webkit-animation: cssload-rotate-one 1.15s linear infinite;
-		-moz-animation: cssload-rotate-one 1.15s linear infinite;
+	-o-animation: cssload-rotate-one 1.15s linear infinite;
+	-ms-animation: cssload-rotate-one 1.15s linear infinite;
+	-webkit-animation: cssload-rotate-one 1.15s linear infinite;
+	-moz-animation: cssload-rotate-one 1.15s linear infinite;
 	border-bottom: 3px solid rgb(168,171,168);
 }
 .cssload-inner.cssload-two {
 	right: 0%;
 	top: 0%;
 	animation: cssload-rotate-two 1.15s linear infinite;
-		-o-animation: cssload-rotate-two 1.15s linear infinite;
-		-ms-animation: cssload-rotate-two 1.15s linear infinite;
-		-webkit-animation: cssload-rotate-two 1.15s linear infinite;
-		-moz-animation: cssload-rotate-two 1.15s linear infinite;
+	-o-animation: cssload-rotate-two 1.15s linear infinite;
+	-ms-animation: cssload-rotate-two 1.15s linear infinite;
+	-webkit-animation: cssload-rotate-two 1.15s linear infinite;
+	-moz-animation: cssload-rotate-two 1.15s linear infinite;
 	border-right: 3px solid rgb(168,0,252);
 }
 .cssload-inner.cssload-three {
 	right: 0%;
 	bottom: 0%;
 	animation: cssload-rotate-three 1.15s linear infinite;
-		-o-animation: cssload-rotate-three 1.15s linear infinite;
-		-ms-animation: cssload-rotate-three 1.15s linear infinite;
-		-webkit-animation: cssload-rotate-three 1.15s linear infinite;
-		-moz-animation: cssload-rotate-three 1.15s linear infinite;
+	-o-animation: cssload-rotate-three 1.15s linear infinite;
+	-ms-animation: cssload-rotate-three 1.15s linear infinite;
+	-webkit-animation: cssload-rotate-three 1.15s linear infinite;
+	-moz-animation: cssload-rotate-three 1.15s linear infinite;
 	border-top: 3px solid rgba(240,82,82,0.87);
 }
 @keyframes cssload-rotate-one {

@@ -241,9 +241,16 @@
   .header-dots {
     top: 60%;
   }
-  .footer__copy-text{
-    font-size: 14px;
-    line-height: 22px;
+  .footer-copy{
+    &__inner{
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &__link::before{
+      width: 30px;
+      height: 25px;
+      left: 82px;
+    }
   }
   .link-email,
   .link-phone{
@@ -260,6 +267,16 @@
     &-title{
       font-size: 32px;
       line-height: 40px;
+    }
+  }
+  .footer-copy{
+    &__inner{
+      justify-content: flex-start;
+      font-size: 13px;
+      line-height: 20px;
+    }
+    &__link::before{
+      left: 75px;
     }
   }
 }
