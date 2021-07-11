@@ -30,29 +30,19 @@
 }
 
 @media (max-width: 1000px){
-  .menu__list{
-    display: none;
-    position: absolute;
-    z-index: 5;
-    top: 140px;
-    left: 0;
-    height: 580px;
-    right: 0;
-    text-align: center;
-    background: linear-gradient(90deg,#8a5bad 0,#8a5bad 0,#ccbcda 100%,#8a5bad 100%);
-    a{
-      display: block;
-      color: transparent;
-      -webkit-text-stroke: 1px $blue;
-      font-size: 30px;
-      line-height: 38px;
-      padding: 17px 0;
-      border-bottom: 1px solid #fff;
-      &:before{
-        position: static;
-      }
+  .menu {
+    &__list {
+      display: none;
+      position: absolute;
+      z-index: 5;
+      top: 140px;
+      left: 0;
+      height: 580px;
+      right: 0;
+      text-align: center;
+      background: linear-gradient(90deg,#8a5bad 0,#8a5bad 0,#ccbcda 100%,#8a5bad 100%);
     }
-    li{
+    &__item {
       display: block;
       & + li{
         margin-left: 0;
@@ -61,15 +51,30 @@
         border-top: 1px solid #fff;
       }
     }
+    &__link {
+      display: block;
+      color: transparent;
+      -webkit-text-stroke: 1px $blue;
+      font-size: 30px;
+      line-height: 38px;
+      padding: 17px 0;
+      border-bottom: 1px solid #fff;
+      &--active {
+        color: $blue;
+      }
+      &:before{
+        position: static;
+      }
+    }
   }
   // start burger menu
   .menu__btn {
     display: block;
-    -webkit-tap-highlight-color: transparent;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
     transition: transform 400ms;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
   }
   .btnRotate.active {
@@ -124,17 +129,27 @@
     }
   }
   .skills__col{
+    position: relative;
     &-list{
       display: none;
     }
-    &:before{
+    &::before{
       position: absolute;
-      content: "\f105";
-      color: #fff;
-      left: 30px;
+      content: "";
+      left: -20px;
+      top: 5px;
+      width: 7px;
+      height: 20px;
       transform: rotate(90deg);
-      font-size: 18px;
-      font-family: 'icomoon';
+      background-image: url("../img/icons/arrow-right.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: transform 0.2s;
+    }
+    
+    &--active::before {
+      transform: rotate(0);
     }
   }
   .work__content{
@@ -156,13 +171,8 @@
       height: 80px;
     }
   }
-  .contact__inner-info{
+  .footer__inner{
     flex-wrap: wrap;
-  }
-  .contact__form{
-    button{
-      margin-bottom: 20px;
-    }
   }
 }
 
@@ -191,6 +201,9 @@
       max-width: 100%;
     }
   }
+  .contacts:first-child {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 600px){
@@ -211,20 +224,6 @@
       }
     }
   }
-  .politics-desc{
-    font-size: 16px;
-    line-height: 24px;
-    padding-left: 15px;
-  }
-  .contact__form{
-    margin-right: 0;
-    &-row{
-      display: block;
-    }
-    input{
-      width: 100%;
-    }
-  }
 }
 @media (max-width: 500px){
   .work__info{
@@ -239,7 +238,7 @@
     }
   }
   .header-dots {
-    top: 60%;
+    top: 70%;
   }
   .footer-copy{
     &__inner{
@@ -252,12 +251,9 @@
       left: 82px;
     }
   }
-  .link-email,
-  .link-phone{
-    a{
-      font-size: 18px;
-      line-height: 26px;
-    }
+  .contacts__link {
+    font-size: 18px;
+    line-height: 26px;
   }
 }
 
@@ -267,16 +263,6 @@
     &-title{
       font-size: 32px;
       line-height: 40px;
-    }
-  }
-  .footer-copy{
-    &__inner{
-      justify-content: flex-start;
-      font-size: 13px;
-      line-height: 20px;
-    }
-    &__link::before{
-      left: 75px;
     }
   }
 }
