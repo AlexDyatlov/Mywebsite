@@ -45,10 +45,8 @@
     "ttf2woff2": "^4.0.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "AlexWeb",
-  "license": "ISC",
-  "homepage": "http://alexdyatlov.github.io"
+  "license": "ISC"
 }
