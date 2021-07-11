@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +21,7 @@
     <div class="header__inner">
       <div class="header__logo">
         <a class="header__logo-box">
-          <img src="img/logo.svg" alt="">
+          <img src="img/logo.svg" alt="Логотип Alexandr Dyatlov">
           <span>Alexandr Dyatlov</span>
         </a>
       </div>
@@ -73,10 +74,10 @@
       <div class="header__info" data-aos="fade-right">
         <h1 class="header__info-title">
           Привет, я <a href="https://vk.com/id168356073">Саша</a>
+          <span class="header__info-text">
+            Веб разработчик
+          </span>
         </h1>
-        <div class="header__info-text">
-          Веб разработчик
-        </div>
       </div>
       <div class="header__info-img" data-aos="fade-left" data-aos-delay="400">
         <img src="img/home-right.png" alt="">
@@ -84,35 +85,32 @@
     </div>
   </div>
 </header>
-  <section class="preloader" id="preloader"> 
+  <div class="preloader" id="preloader"> 
     <div class="cssload-loader">
       <div class="cssload-inner cssload-one"></div>
       <div class="cssload-inner cssload-two"></div>
       <div class="cssload-inner cssload-three"></div>
     </div>
-  </section>
-  <section id="about" class="about-me" data-aos="zoom-in-up">
-    <div class="container">
-      <div class="about-item">
-        <div class="about-item__img">
-          <img src="img/logo.svg" alt="">
-        </div>
-        <div class="about-item__text">
-          <p>Меня зовут Александр Дятлов, я веб-разработчик с опытом разработки более года. Живу в Санкт-Петербурге, свободное время уделяю спорту и фронтенд-разработке.
-          </p>
-        </div>
-      </div>
+  </div>
+  <div id="about" class="about" data-aos="zoom-in-up">
+    <div class="about__img">
+      <img src="img/logo.svg" alt="Логотип Alexandr Dyatlov">
     </div>
-  </section>
+    <div class="about__text">
+      <p>
+        Меня зовут Александр Дятлов, я веб-разработчик с опытом разработки более года. Живу в Санкт-Петербурге, свободное время уделяю спорту и фронтенд-разработке.
+      </p>
+    </div>
+  </div>
   <section id="attendance" class="services">
     <div class="container">
-      <div class="services__title section-title" data-aos="zoom-in-up" data-aos-delay="200">
+      <h2 class="services__title section-title" data-aos="zoom-in-up" data-aos-delay="200">
         Услуги
-      </div>
+      </h2>
       <div class="services__top">
-        <div class="services__top-text title">
+        <h3 class="services__top-text title">
           В мои услуги входит:
-        </div>
+        </h3>
         <p class="services__top-description">
           Вёрстка сайтов – это процесс создания веб-страницы (страницы сайта) с использованием специальной разметки и программного кода. Простыми словами – это визуализация графического оформления сайта, которая выполняется по готовому макету от веб-дизайнера.
         </p>
@@ -166,13 +164,13 @@
   </section>
   <section id="attainments" class="skills">
     <div class="container">
-      <div class="skills__title section-title" data-aos="zoom-in-down">
+      <h2 class="skills__title section-title" data-aos="zoom-in-down">
         Навыки
-      </div>
+      </h2>
       <div class="skills__top">
-        <div class="skills__top-text title">
+        <h3 class="skills__top-text title">
           Мои навыки и умения.
-        </div>
+        </h3>
         <div class="skills__top-description">
           <p>Мне нравится создавать привлекательные веб-сайты, которые бывают быстрыми, простыми в использовании для
             пользователей и выполнены точно по дизайну. Я могу внести правки на сайте, создать сайт или расширить
@@ -230,7 +228,7 @@
           </div>
         </div>
         <div class="skills-man">
-          <img src="img/skills-bg.svg" alt="">
+          <img src="img/skills-bg.svg" alt="" aria-hidden="true">
         </div>
       </div>
       <div class="skills-box__items">
@@ -294,12 +292,12 @@
   </section>
   <section id="portfolio" class="works">
     <div class="container">
-      <div class="works__title section-title" data-aos="zoom-in" data-aos-delay="200">
+      <h2 class="works__title section-title" data-aos="zoom-in" data-aos-delay="200">
         Работы
-      </div>
-      <div class="works__text title">
+      </h2>
+      <h3 class="works__text title">
         Здесь представлены мои работы.
-      </div>
+      </h3>
       <ul class="works__slider">
         <li class="works__slider-item">
           <div class="work__content">
@@ -487,15 +485,15 @@
   <footer id="contacts" class="footer">
   <div class="footer__content">
     <div class="container">
-      <div class="footer__title section-title" data-aos="zoom-in-down">
+      <h2 class="footer__title section-title" data-aos="zoom-in-down">
         Контакты
-      </div>
-      <div class="contact__inner-info">
-        <div class="contact__form" data-aos="fade-right" data-aos-delay="400">
+      </h2>
+      <div class="footer__inner">
+        <div class="contacts" data-aos="fade-right" data-aos-delay="400">
           <div class="footer__text title">
             Давайте работать вместе.
           </div>
-          <div class="contact__form-text">
+          <div class="contacts__text">
             <p>
               Есть проект, который вы хотели бы обсудить?
             </p>
@@ -503,32 +501,31 @@
               Напишите мне в любую социальную сеть :)
             </p>
           </div>
-          <ul class="contact__social-link">
-            <li class="link link-vk">
-              <a href="https://vk.com/id168356073">ВКонтакте</a>
+          <ul class="contacts__list">
+            <li class="contacts__item contacts__item--vk">
+              <a class="contacts__link" href="https://vk.com/id168356073">ВКонтакте</a>
             </li>
-            <li class="link link-telegram">
-              <a href="https://t.me/bsbhahs">Telegram</a>
+            <li class="contacts__item contacts__item--telegram">
+              <a class="contacts__link" href="https://t.me/bsbhahs">Telegram</a>
             </li>
-            <li class="link link-instagram">
-              <a href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a>
+            <li class="contacts__item contacts__item--instagram">
+              <a class="contacts__link" href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a>
             </li>
-            <li class="link link-linkedin">
-              <a href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
+            <li class="contacts__item contacts__item--linkedin">
+              <a class="contacts__link" href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
             </li>
           </ul>
         </div>
-
-        <div class="contact__social">
-          <div class="contact__social-description" data-aos="zoom-in-left" data-aos-delay="250">
+        <div class="contacts">
+          <div class="footer__text title" data-aos="zoom-in-left" data-aos-delay="250">
             Всегда на связи:
           </div>
-          <ul class="contact__social-link" data-aos="fade-left">
-            <li class="link link-email">
-              <a href="mailto:alexdyatlov.web@gmail.com">alexdyatlov.web@gmail.com</a>
+          <ul class="contacts__list" data-aos="fade-left">
+            <li class="contacts__item contacts__item--email">
+              <a class="contacts__link" href="mailto:alexdyatlov.web@gmail.com">alexdyatlov.web@gmail.com</a>
             </li>
-            <li class="link link-phone">
-              <a href="tel:79291029246">+7 (929) 102-92-46</a>
+            <li class="contacts__item contacts__item--phone">
+              <a class="contacts__link" href="tel:79291029246">+7 (929) 102-92-46</a>
             </li>
           </ul>
         </div>
