@@ -2,7 +2,6 @@
 
 "use strict";
 
-//определим переменные для функцийи плагинов
 let gulp = require("gulp"),
 	sass = require("gulp-sass"), //препроцессор
 	cssmin = require("gulp-cssmin"), //минификатор CSS
@@ -21,7 +20,6 @@ let gulp = require("gulp"),
 	ttf2woff2 = require("gulp-ttf2woff2"), //конвертирует шрифты в веб-формат
 	ttf2eot = require("gulp-ttf2eot"), //конвертирует шрифты в веб-формат
 	size = require("gulp-filesize"), //выводит в консоль размер файлов до и после их сжатия, чем создаёт чувство глубокого морального удовлетворения, особенно при минификации картинок
-	rsync = require("gulp-rsync"), //заливает файлы проекта на хостинг по ftp с заданными параметрами
 	sourcemaps = require("gulp-sourcemaps"); //рисует карту слитого воедино файла, чтобы было понятно, что из какого файла бралось
 
 gulp.task("scss", function () {
@@ -57,7 +55,7 @@ gulp.task("scss", function () {
 		)
 		.pipe(
 			cleancss({
-				compatibility: "ie8",
+				compatibility: "ie11",
 				level: {
 					1: {
 						specialComments: 0,
@@ -85,16 +83,12 @@ gulp.task("scss", function () {
 		.pipe(size()); //смотрим размер получившегося файла
 });
 
-//Далее будут похожие или полностью аналогичные функции, которые нет смысла расписывать. Смотрите по аналогии с вышеописанными.
-
 gulp.task("style", function () {
 	//создаём единую библиотеку из css-стилей всех плагинов
 	return gulp
 		.src([
-			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
 			"node_modules/slick-carousel/slick/slick.css",
-			"node_modules/jquery-form-styler/dist/jquery.formstyler.css",
 			"node_modules/aos/dist/aos.css"
 		])
 		.pipe(sourcemaps.init())
@@ -109,10 +103,8 @@ gulp.task("script", function () {
 	//аналогично поступаем с js-файлами
 	return gulp
 		.src([
-			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
 			"node_modules/slick-carousel/slick/slick.min.js",
-			"node_modules/jquery-form-styler/dist/jquery.formstyler.min.js",
 			"node_modules/aos/dist/aos.js",
 			"node_modules/smooth-scroll/dist/smooth-scroll.polyfills.min.js",
 		])
@@ -212,31 +204,6 @@ gulp.task("font-eot", function () {
 		);
 });
 
-// gulp.task('favicons', function(){ //генератор favicon для всех устройств. Запускается вручную отдельной командой. Генерирует фавиконки на все случаи жизни и файл favicons.html, в котором находятся подключения этих иконок. Скопируйте подключения в файлы проекта и удалите favicons.html Больше нужно для веб-приложений, потому что их ярлыки выносят на главный экран. Сайтам же достаточно закинуть и подключить одну favicon.ico Короче, если вы не уверены, что большинство пользователей мобильных устройств запихнут ярлык вашего сайта на главный экран и разрешат push-уведомления в телефоне, ваша фамилия не Цукерберг и не Дуров - вам этот таск, скорее всего не нужен.
-//   return gulp.src('src/img/favicon/favicon.png')
-//   .pipe(favgen({
-//     appName: 'My App',
-//     appShortName: 'App',
-//     appDescription: 'This is my application',
-//     developerName: 'Hayden Bleasel',
-//     developerURL: 'http://haydenbleasel.com/',
-//     background: '#020307',
-//     path: 'favicons/',
-//     url: 'http://haydenbleasel.com/',
-//     display: 'standalone',
-//     orientation: 'portrait',
-//     scope: '/',
-//     start_url: '/?homescreen=1',
-//     version: 1.0,
-//     logging: false,
-//     html: 'favicons.html',
-//     pipeHTML: true,
-//     replace: true,
-//   })
-//   )
-//   .pipe(gulp.dest('src/'))
-// });
-
 gulp.task("images", function () {
 	//пережимаем изображения и складываем их в директорию build
 	return gulp
@@ -287,25 +254,6 @@ gulp.task("watch", function () {
 	gulp.watch("src/img/**/*.*", gulp.parallel("images"));
 });
 
-gulp.task("deploy", function () {
-	//грузим файлы на хостинг по FTP
-	return gulp.src("build/**").pipe(
-		rsync({
-			root: "build/", //откуда берём файлы
-			hostname: "yourLogin@yourIp", //ваш логин на хостинге@IPхостинга
-			destination: "sitePath", //папка, в которую будем загружать
-			//port: 25212, //порт, к которому пойдёт подключение. Нужна, если нестандартный порт
-			include: ["*.htaccess"], //файлы, которые нужно включить в передачу
-			exclude: ["**/Thumbs.db", "**/*.DS_Store"], //файлы, которые нужно исключить из передачи
-			recursive: true, //передавать все файлы и папки рекурсивно
-			archive: true, //режим архива
-			silent: false, //отключим ведение журнала
-			compress: true, //включим сжатие
-			progress: true, //выведем прогресс передачи в консоль
-		}),
-	);
-});
-
 gulp.task("browser-sync", function () {
 	//настройки лайв-сервера
 	browserSync.init({
@@ -313,8 +261,6 @@ gulp.task("browser-sync", function () {
 			baseDir: "build/", //какую папку показывать в браузере
 		},
 		browser: ["chrome"], //в каком браузере
-		//tunnel: " ", //тут можно прописать название проекта и дать доступ к нему через интернет. Работает нестабильно, запускается через раз. Не рекомендуется включать без необходимости.
-		//tunnel:true, //работает, как и предыдущяя опция, но присваивает рандомное имя. Тоже запускается через раз и поэтому не рекомендуется для включения
 		host: "192.168.0.106", //IP сервера в локальной сети. Отключите, если у вас DHCP, пропишите под себя, если фиксированный IP в локалке.
 	});
 });
@@ -334,4 +280,4 @@ gulp.task(
 		"font-woff2",
 		"images",
 	),
-); //запускает все перечисленные задачи разом
+);

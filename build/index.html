@@ -1,67 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Open+Sans:wght@800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <meta name="google-site-verification" content="IbOjTkn0a0Lr3S44p7R8A7-IkJyGyo-T5VAtr5PfnVE" />
-    <link rel="icon" href="../img/icons/user.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <title>Alex Dyatlov - a web developer</title>
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Open+Sans:wght@800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="google-site-verification" content="IbOjTkn0a0Lr3S44p7R8A7-IkJyGyo-T5VAtr5PfnVE" />
+  <link rel="icon" href="../img/icons/user.ico" type="image/x-icon">
+  <base target="_blank">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Alex Dyatlov - a web developer</title>
+  <meta name="description" content="Разработка сайтов в СПБ. Адаптивная вёрстка сайтов по доступным ценам." />
+</head>
 
 <body>
   <header id="home" class="header">
   <div class="container">
     <div class="header__inner">
       <div class="header__logo">
-        <a class="header__logo-box" href="#">
-          <img src="img/logo.svg" alt="">
+        <a class="header__logo-box">
+          <img src="img/logo.svg" alt="Логотип Alexandr Dyatlov">
           <span>Alexandr Dyatlov</span>
         </a>
       </div>
       <nav class="menu">
-        <svg class="menu__btn btnRotate" viewBox="0 0 100 100" width="80">
-          <path
-                class="line top"
-                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
-          <path
-                class="line middle"
-                d="m 30,50 h 40" />
-          <path
-                class="line bottom"
-                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
-        </svg>
+        <button class="menu__btn btnRotate" type="button">
+          <span class="visually-hidden">Кнопка меню</span>
+          <svg viewBox="0 0 100 100" width="80">
+            <path class="line top"
+              d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
+            <path class="line middle" d="m 30,50 h 40" />
+            <path class="line bottom"
+              d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
+          </svg>
+        </button>
         <ul class="menu__list">
-          <li class="menu__list-item active-item">
-            <a class="menu__list-link" href="#home">
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="#home">
               Главная
             </a>
           </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#about">
+          <li class="menu__item">
+            <a class="menu__link" href="#about">
               Обо мне
             </a>
           </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#attendance">
+          <li class="menu__item">
+            <a class="menu__link" href="#attendance">
               Услуги
             </a>
           </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#attainments">
+          <li class="menu__item">
+            <a class="menu__link" href="#attainments">
               Навыки
             </a>
           </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#portfolio">
+          <li class="menu__item">
+            <a class="menu__link" href="#portfolio">
               Работы
             </a>
           </li>
-          <li class="menu__list-item">
-            <a class="menu__list-link" href="#contacts">
+          <li class="menu__item">
+            <a class="menu__link" href="#contacts">
               Контакты
             </a>
           </li>
@@ -72,10 +74,10 @@
       <div class="header__info" data-aos="fade-right">
         <h1 class="header__info-title">
           Привет, я <a href="https://vk.com/id168356073">Саша</a>
+          <span class="header__info-text">
+            Веб разработчик
+          </span>
         </h1>
-        <div class="header__info-text">
-          Веб разработчик
-        </div>
       </div>
       <div class="header__info-img" data-aos="fade-left" data-aos-delay="400">
         <img src="img/home-right.png" alt="">
@@ -83,49 +85,44 @@
     </div>
   </div>
 </header>
-  <!-- WRITE CODE HERE -->
-  <section class="preloader" id="preloader"> 
+  <div class="preloader" id="preloader"> 
     <div class="cssload-loader">
       <div class="cssload-inner cssload-one"></div>
       <div class="cssload-inner cssload-two"></div>
       <div class="cssload-inner cssload-three"></div>
     </div>
-  </section>
-  <section id="about" class="about-me" data-aos="zoom-in-up">
-    <div class="container">
-      <div class="about-item">
-        <div class="about-item__img">
-          <img src="img/logo.svg" alt="">
-        </div>
-        <div class="about-item__text">
-          <p>Меня зовут Александр Дятлов, я являюсь сертифицированным веб-разработчиком. Мне 19 лет, студент, живу в
-            Санкт-Петербурге, обожаю спорт, плавание, сейчас всё свободное время занимаюсь вёрсткой сайтов и стараюсь
-            развиваться в этом направлении.
-          </p>
-        </div>
-      </div>
+  </div>
+  <div id="about" class="about" data-aos="zoom-in-up">
+    <div class="about__img">
+      <img src="img/logo.svg" alt="Логотип Alexandr Dyatlov">
     </div>
-  </section>
+    <div class="about__text">
+      <p>
+        Меня зовут Александр Дятлов, я веб-разработчик с опытом разработки более года. Живу в Санкт-Петербурге, свободное время уделяю спорту и фронтенд-разработке.
+      </p>
+    </div>
+  </div>
   <section id="attendance" class="services">
     <div class="container">
-      <div class="services__title section-title" data-aos="zoom-in-up" data-aos-delay="200">
+      <h2 class="services__title section-title" data-aos="zoom-in-up" data-aos-delay="200">
         Услуги
-      </div>
+      </h2>
       <div class="services__top">
-        <div class="services__top-text title">
-          В мои услуги входит вёрстка сайтов.
-        </div>
-        <div class="services__top-description">
-          Вёрстка сайтов – это процесс создания веб-страницы (страницы сайта) с использованием специальной разметки и
-          программного кода. Простыми словами – это визуализация графического оформления сайта, которая выполняется по
-          готовому макету от веб-дизайнера.
-        </div>
+        <h3 class="services__top-text title">
+          В мои услуги входит:
+        </h3>
+        <p class="services__top-description">
+          Вёрстка сайтов – это процесс создания веб-страницы (страницы сайта) с использованием специальной разметки и программного кода. Простыми словами – это визуализация графического оформления сайта, которая выполняется по готовому макету от веб-дизайнера.
+        </p>
+        <p class="services__top-description">
+          Интеграция вёрстки в CMS (WordPress) - это популярная система управления контентом, позволяет владельцам сайтов, редакторам, авторам управлять их сайтами и публиковать контент безо всяких знаний программирования.
+        </p>
         <div class="services__top-btn">
-          <a class="services__btn" href="#contacts">Заказать вёрстку</a>
+          <a class="services__btn" href="#contacts">Заказать сайт</a>
         </div>
       </div>
-      <div class="services__items">
-        <div class="services__item services__item--landing" data-aos="fade-up" data-aos-delay="200">
+      <ul class="services__items">
+        <li class="services__item services__item--landing" data-aos="fade-up" data-aos-delay="200">
           <div class="services__item-title">
             <span class="page page-landing">Вёрстка</span> Лендинг пейджа
           </div>
@@ -136,8 +133,8 @@
           <div class="services__item-btn">
             <a class="default__btn default__btn-landing" href="mailto:alexdyatlov.web@gmail.com">Заказать</a>
           </div>
-        </div>
-        <div class="services__item services__item--сorporate" data-aos="fade-up" data-aos-delay="450">
+        </li>
+        <li class="services__item services__item--сorporate" data-aos="fade-up" data-aos-delay="450">
           <div class="services__item-title">
             <span class="page page-сorporate">Вёрстка</span> Корпоративного сайта
           </div>
@@ -149,8 +146,8 @@
           <div class="services__item-btn">
             <a class="default__btn default__btn-сorporate" href="mailto:alexdyatlov.web@gmail.com">Заказать</a>
           </div>
-        </div>
-        <div class="services__item services__item--marketplace" data-aos="fade-up" data-aos-delay="650">
+        </li>
+        <li class="services__item services__item--marketplace" data-aos="fade-up" data-aos-delay="650">
           <div class="services__item-title">
             <span class="page page-marketplace">Вёрстка</span> Маркетплейса или интернет-магазина
           </div>
@@ -161,26 +158,26 @@
           <div class="services__item-btn">
             <a class="default__btn default__btn-marketplace" href="mailto:alexdyatlov.web@gmail.com">Заказать</a>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </section>
   <section id="attainments" class="skills">
     <div class="container">
-      <div class="skills__title section-title" data-aos="zoom-in-down">
+      <h2 class="skills__title section-title" data-aos="zoom-in-down">
         Навыки
-      </div>
+      </h2>
       <div class="skills__top">
-        <div class="skills__top-text title">
+        <h3 class="skills__top-text title">
           Мои навыки и умения.
-        </div>
+        </h3>
         <div class="skills__top-description">
           <p>Мне нравится создавать привлекательные веб-сайты, которые бывают быстрыми, простыми в использовании для
             пользователей и выполнены точно по дизайну. Я могу внести правки на сайте, создать сайт или расширить
             существующий проект.
           </p>
           <p>
-            Вот подборка современных технологий, с которыми я работаю:
+            Вот список современных технологий, с которыми я работаю:
           </p>
         </div>
       </div>
@@ -210,7 +207,7 @@
               <li><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">Flex/Grid</a></li>
               <li><a href="https://gulpjs.com/">Gulp/Webpack</a></li>
               <li><a href="https://tproger.ru/translations/difference-between-git-and-github/">Git и GitHub</a></li>
-              <li><a href="https://www.hostinger.ru/rukovodstva/chto-takoe-npm/">npm</a></li>
+              <li><a href="https://cutt.ly/ipGBhir">Pixel Perfect</a></li>
             </ul>
           </div>
           <div class="skills__col">
@@ -225,13 +222,13 @@
               </li>
               <li><a href="https://tproger.ru/translations/responsive-web-design-tips/">Адаптивная вёрстка</a></li>
               <li><a href="https://skillbox.ru/media/design/chto_takoe_figma/">Photoshop, Figma, Zeplin</a></li>
-              <li><a href="https://cutt.ly/ipGBhir">Pixel Perfect</a></li>
               <li><a href="https://habr.com/ru/post/269419/">Mobile First</a></li>
+              <li><a href="https://www.hostinger.ru/rukovodstva/chto-takoe-wordpress-obzor-populjarnoj-cms/">WordPress</a></li>
             </ul>
           </div>
         </div>
         <div class="skills-man">
-          <img src="img/skills-bg.svg" alt="">
+          <img src="img/skills-bg.svg" alt="" aria-hidden="true">
         </div>
       </div>
       <div class="skills-box__items">
@@ -295,17 +292,17 @@
   </section>
   <section id="portfolio" class="works">
     <div class="container">
-      <div class="works__title section-title" data-aos="zoom-in" data-aos-delay="200">
+      <h2 class="works__title section-title" data-aos="zoom-in" data-aos-delay="200">
         Работы
-      </div>
-      <div class="works__text title">
+      </h2>
+      <h3 class="works__text title">
         Здесь представлены мои работы.
-      </div>
-      <div class="works__slider">
-        <div class="works__slider-item">
+      </h3>
+      <ul class="works__slider">
+        <li class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
-              <img src="img/macfood.jpg" alt="">
+              <img src="img/healthyfood.png" alt="Healthy Food - сервиc по доставке готовых блюд на дом.">
             </div>
             <div class="work__info">
               <div class="work__info-title">
@@ -315,17 +312,17 @@
                 Сервиc по доставке готовых блюд на дом.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="/works/HealthyFood">
+                <a class="btn work-btn" href="https://alexdyatlov.github.io/healthy-food/">
                   Посетить сайт
                 </a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="works__slider-item">
+        </li>
+        <li class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
-              <img src="img/shelter.jpg" alt="">
+              <img src="img/shelter.png" alt="Уютный дом - сайт некоммерческой организации для помощи животным.">
             </div>
             <div class="work__info">
               <div class="work__info-title">
@@ -335,17 +332,17 @@
                 Сайт некоммерческой организации для помощи животным.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="/works/CozyHouse">
+                <a class="btn work-btn" href="https://alexdyatlov.github.io/cozy-house/">
                   Посетить сайт
                 </a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="works__slider-item">
+        </li>
+        <li class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
-              <img src="img/design.jpg" alt="">
+              <img src="img/design.png" alt="Design Agency - агентство оказывающее услуги в области брендинга и дизайна.">
             </div>
             <div class="work__info">
               <div class="work__info-title">
@@ -355,17 +352,17 @@
                 Агентство оказывающее услуги в области брендинга и дизайна.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="/works/DesignAgency">
+                <a class="btn work-btn" href="https://alexdyatlov.github.io/design-agency/">
                   Посетить сайт
                 </a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="works__slider-item">
+        </li>
+        <li class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
-              <img src="img/besttravel.jpg" alt="">
+              <img src="img/besttravel.png" alt="Best Travel - сервис для поиска и бронирования туров онлайн.">
             </div>
             <div class="work__info">
               <div class="work__info-title">
@@ -375,17 +372,17 @@
                 Сервис для поиска и бронирования туров онлайн.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="/works/BestTravel">
+                <a class="btn work-btn" href="https://alexdyatlov.github.io/BestTravel/">
                   Посетить сайт
                 </a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="works__slider-item">
+        </li>
+        <li class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
-              <img src="img/audiru.jpg" alt="">
+              <img src="img/audiru.png" alt="Audi R8 - сайт официального дилера Audi R8.">
             </div>
             <div class="work__info">
               <div class="work__info-title">
@@ -395,17 +392,17 @@
                 Сайт официального дилера Audi R8.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="/works/AudiR8">
+                <a class="btn work-btn" href="https://alexdyatlov.github.io/Audi/">
                   Посетить сайт
                 </a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="works__slider-item">
+        </li>
+        <li class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
-              <img src="img/itariki.jpg" alt="">
+              <img src="img/itariki.png" alt="Итарики - экскурсионный центр Итарики.">
             </div>
             <div class="work__info">
               <div class="work__info-title">
@@ -415,17 +412,17 @@
                 Экскурсионный центр Итарики.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="/works/Itariki">
+                <a class="btn work-btn" href="https://alexdyatlov.github.io/Itariki/">
                   Посетить сайт
                 </a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="works__slider-item">
+        </li>
+        <li class="works__slider-item">
           <div class="work__content">
             <div class="work__content-img">
-              <img src="img/drive.jpg" alt="">
+              <img src="img/drive.png" alt="Drive Moto - Интернет магазин Drive Moto.">
             </div>
             <div class="work__info">
               <div class="work__info-title">
@@ -435,78 +432,100 @@
                 Интернет магазин Drive Moto.
               </div>
               <div class="work__info-btn">
-                <a class="btn work-btn" href="/works/DriveMoto">
+                <a class="btn work-btn" href="https://alexdyatlov.github.io/Drive-Moto/">
                   Посетить сайт
                 </a>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </li>
+        <li class="works__slider-item">
+          <div class="work__content">
+            <div class="work__content-img">
+              <img src="img/consalt.png" alt="Корпоративный сайт АСП-Консалт.">
+            </div>
+            <div class="work__info">
+              <div class="work__info-title">
+                АСП-Консалт
+              </div>
+              <div class="work__info-text">
+                Корпоративный сайт компании АСП-Консалт.
+              </div>
+              <div class="work__info-btn">
+                <a class="btn work-btn" href="https://asp-consalt.ru/">
+                  Посетить сайт
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="works__slider-item">
+          <div class="work__content">
+            <div class="work__content-img">
+              <img src="img/github.png" alt="Остальные работы находятся на моём GitHub.">
+            </div>
+            <div class="work__info">
+              <div class="work__info-title">
+                GitHub
+              </div>
+              <div class="work__info-text">
+                Остальные работы находятся на моём GitHub.
+              </div>
+              <div class="work__info-btn">
+                <a class="btn work-btn" href="https://github.com/AlexDyatlov">
+                  Посетить сайт
+                </a>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
-  <!-- STOP WRITE CODE -->
   <footer id="contacts" class="footer">
   <div class="footer__content">
     <div class="container">
-      <div class="footer__title section-title" data-aos="zoom-in-down">
+      <h2 class="footer__title section-title" data-aos="zoom-in-down">
         Контакты
-      </div>
-      <div class="contact__inner-info">
-        <div class="contact__form" data-aos="fade-right" data-aos-delay="400">
+      </h2>
+      <div class="footer__inner">
+        <div class="contacts" data-aos="fade-right" data-aos-delay="400">
           <div class="footer__text title">
             Давайте работать вместе.
           </div>
-          <div class="contact__form-text">
-            Есть проект, который вы хотели бы обсудить?
+          <div class="contacts__text">
+            <p>
+              Есть проект, который вы хотели бы обсудить?
+            </p>
+            <p>
+              Напишите мне в любую социальную сеть :)
+            </p>
           </div>
-          <form>
-            <!-- Hidden Required Fields -->
-            <input type="hidden" name="project_name" value="AlexDyatlov">
-            <input type="hidden" name="admin_email" value="alexdyatlov.web@gmail.com">
-            <input type="hidden" name="form_subject" value="form footer">
-            <!-- END Hidden Required Fields -->
-            <div class="contact__form-row">
-              <input name="Имя" class="form-contact" type="text" placeholder="Имя" required>
-              <input name="e-mail" class="form-contact" type="email" placeholder="Email" required>
-            </div>
-            <textarea name="Сообщение" class="form-contact" placeholder="Сообщение" required></textarea>
-            <div class="contact__form-politics">
-              <input type="checkbox" id="checkbox">
-              <div class="politics-desc">
-                Я принимаю условия политики конфиденциальности и даю согласие на обработку персональных данных.
-              </div>
-            </div>
-            <button type="submit" name="send-sms" disabled="disabled" id="send-sms">Отправить</button>
-          </form>
-        </div>
-        <div class="contact__social">
-          <div class="contact__social-title" data-aos="zoom-in-left" data-aos-delay="150">
-            Мои социальные сети:
-          </div>
-          <ul class="contact__social-link">
-            <li class="link link-vk" data-aos="fade-up" data-aos-delay="200">
-              <a href="https://vk.com/id168356073">ВКонтакте</a>
+          <ul class="contacts__list">
+            <li class="contacts__item contacts__item--vk">
+              <a class="contacts__link" href="https://vk.com/id168356073">ВКонтакте</a>
             </li>
-            <li class="link link-telegram" data-aos="fade-up" data-aos-delay="250">
-              <a href="https://t.me/bsbhahs">Telegram</a>
+            <li class="contacts__item contacts__item--telegram">
+              <a class="contacts__link" href="https://t.me/bsbhahs">Telegram</a>
             </li>
-            <li class="link link-instagram" data-aos="fade-up" data-aos-delay="300">
-              <a href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a>
+            <li class="contacts__item contacts__item--instagram">
+              <a class="contacts__link" href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a>
             </li>
-            <li class="link link-linkedin" data-aos="fade-up" data-aos-delay="350">
-              <a href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
+            <li class="contacts__item contacts__item--linkedin">
+              <a class="contacts__link" href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
             </li>
           </ul>
-          <div class="contact__social-description" data-aos="zoom-in-left" data-aos-delay="250">
+        </div>
+        <div class="contacts">
+          <div class="footer__text title" data-aos="zoom-in-left" data-aos-delay="250">
             Всегда на связи:
           </div>
-          <ul class="contact__social-link" data-aos="fade-left">
-            <li class="link link-email">
-              <a href="mailto:alexdyatlov.web@gmail.com">alexdyatlov.web@gmail.com</a>
+          <ul class="contacts__list" data-aos="fade-left">
+            <li class="contacts__item contacts__item--email">
+              <a class="contacts__link" href="mailto:alexdyatlov.web@gmail.com">alexdyatlov.web@gmail.com</a>
             </li>
-            <li class="link link-phone">
-              <a href="tel:79291029246">+7 (929) 102-92-46</a>
+            <li class="contacts__item contacts__item--phone">
+              <a class="contacts__link" href="tel:79291029246">+7 (929) 102-92-46</a>
             </li>
           </ul>
         </div>
@@ -517,7 +536,7 @@
     <div class="container">
       <div class="footer-copy__inner">
         <p class="footer-copy__text">
-          © 2020 Все права защищены.
+          © 2020-2021 |
         </p>
         <a class="link footer-copy__link" href="https://github.com/AlexDyatlov">Alex Dyatlov</a>
       </div>

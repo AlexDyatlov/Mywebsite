@@ -1,64 +1,47 @@
 <footer id="contacts" class="footer">
   <div class="footer__content">
     <div class="container">
-      <div class="footer__title section-title" data-aos="zoom-in-down">
+      <h2 class="footer__title section-title" data-aos="zoom-in-down">
         Контакты
-      </div>
-      <div class="contact__inner-info">
-        <div class="contact__form" data-aos="fade-right" data-aos-delay="400">
+      </h2>
+      <div class="footer__inner">
+        <div class="contacts" data-aos="fade-right" data-aos-delay="400">
           <div class="footer__text title">
             Давайте работать вместе.
           </div>
-          <div class="contact__form-text">
-            Есть проект, который вы хотели бы обсудить?
+          <div class="contacts__text">
+            <p>
+              Есть проект, который вы хотели бы обсудить?
+            </p>
+            <p>
+              Напишите мне в любую социальную сеть :)
+            </p>
           </div>
-          <form>
-            <!-- Hidden Required Fields -->
-            <input type="hidden" name="project_name" value="AlexDyatlov">
-            <input type="hidden" name="admin_email" value="alexdyatlov.web@gmail.com">
-            <input type="hidden" name="form_subject" value="form footer">
-            <!-- END Hidden Required Fields -->
-            <div class="contact__form-row">
-              <input name="Имя" class="form-contact" type="text" placeholder="Имя" required>
-              <input name="e-mail" class="form-contact" type="email" placeholder="Email" required>
-            </div>
-            <textarea name="Сообщение" class="form-contact" placeholder="Сообщение" required></textarea>
-            <div class="contact__form-politics">
-              <input type="checkbox" id="checkbox">
-              <div class="politics-desc">
-                Я принимаю условия политики конфиденциальности и даю согласие на обработку персональных данных.
-              </div>
-            </div>
-            <button type="submit" name="send-sms" disabled="disabled" id="send-sms">Отправить</button>
-          </form>
-        </div>
-        <div class="contact__social">
-          <div class="contact__social-title" data-aos="zoom-in-left" data-aos-delay="150">
-            Мои социальные сети:
-          </div>
-          <ul class="contact__social-link">
-            <li class="link link-vk" data-aos="fade-up" data-aos-delay="200">
-              <a href="https://vk.com/id168356073">ВКонтакте</a>
+          <ul class="contacts__list">
+            <li class="contacts__item contacts__item--vk">
+              <a class="contacts__link" href="https://vk.com/id168356073">ВКонтакте</a>
             </li>
-            <li class="link link-telegram" data-aos="fade-up" data-aos-delay="250">
-              <a href="https://t.me/bsbhahs">Telegram</a>
+            <li class="contacts__item contacts__item--telegram">
+              <a class="contacts__link" href="https://t.me/bsbhahs">Telegram</a>
             </li>
-            <li class="link link-instagram" data-aos="fade-up" data-aos-delay="300">
-              <a href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a>
+            <li class="contacts__item contacts__item--instagram">
+              <a class="contacts__link" href="https://www.instagram.com/rainy_st.petersburg/">Instagram</a>
             </li>
-            <li class="link link-linkedin" data-aos="fade-up" data-aos-delay="350">
-              <a href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
+            <li class="contacts__item contacts__item--linkedin">
+              <a class="contacts__link" href="https://www.linkedin.com/in/alexander-d-web-developer">LinkedIn</a>
             </li>
           </ul>
-          <div class="contact__social-description" data-aos="zoom-in-left" data-aos-delay="250">
+        </div>
+        <div class="contacts">
+          <div class="footer__text title" data-aos="zoom-in-left" data-aos-delay="250">
             Всегда на связи:
           </div>
-          <ul class="contact__social-link" data-aos="fade-left">
-            <li class="link link-email">
-              <a href="mailto:alexdyatlov.web@gmail.com">alexdyatlov.web@gmail.com</a>
+          <ul class="contacts__list" data-aos="fade-left">
+            <li class="contacts__item contacts__item--email">
+              <a class="contacts__link" href="mailto:alexdyatlov.web@gmail.com">alexdyatlov.web@gmail.com</a>
             </li>
-            <li class="link link-phone">
-              <a href="tel:79291029246">+7 (929) 102-92-46</a>
+            <li class="contacts__item contacts__item--phone">
+              <a class="contacts__link" href="tel:79291029246">+7 (929) 102-92-46</a>
             </li>
           </ul>
         </div>
@@ -69,7 +52,7 @@
     <div class="container">
       <div class="footer-copy__inner">
         <p class="footer-copy__text">
-          © 2020 Все права защищены.
+          © 2020-2021 |
         </p>
         <a class="link footer-copy__link" href="https://github.com/AlexDyatlov">Alex Dyatlov</a>
       </div>

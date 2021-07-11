@@ -64,3 +64,12 @@ body{
   line-height: 38px;
   margin-bottom: 40px;
 }
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
