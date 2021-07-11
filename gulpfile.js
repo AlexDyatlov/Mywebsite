@@ -74,7 +74,7 @@ gulp.task("scss", function () {
 			}),
 		)
 		.pipe(sourcemaps.write()) //записываем карту в итоговый файл
-		.pipe(gulp.dest("build/css")) //кладём итоговый файл в директорию build/css
+		.pipe(gulp.dest("docs/css")) //кладём итоговый файл в директорию docs/css
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -95,7 +95,7 @@ gulp.task("style", function () {
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
 		.pipe(cssmin()) //минифицируем полученный файл
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest("build/css")) //кидаем готовый файл в директорию
+		.pipe(gulp.dest("docs/css")) //кидаем готовый файл в директорию
 		.pipe(size());
 });
 
@@ -114,12 +114,12 @@ gulp.task("script", function () {
 		.pipe(concat("libs.min.js"))
 		.pipe(uglify())
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest("build/js"))
+		.pipe(gulp.dest("docs/js"))
 		.pipe(size());
 });
 
 gulp.task("minjs", function () {
-	//минифицируем наш main.js и перекидываем в директорию build
+	//минифицируем наш main.js и перекидываем в директорию docs
 	return gulp
 		.src("src/js/main.js")
 		.pipe(size())
@@ -130,7 +130,7 @@ gulp.task("minjs", function () {
 				suffix: ".min",
 			}),
 		)
-		.pipe(gulp.dest("build/js"))
+		.pipe(gulp.dest("docs/js"))
 		.pipe(size());
 });
 
@@ -156,7 +156,7 @@ gulp.task("html", function () {
 			}),
 		)
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest("build/"))
+		.pipe(gulp.dest("docs/"))
 		.pipe(size())
 		.pipe(
 			browserSync.reload({
@@ -166,11 +166,11 @@ gulp.task("html", function () {
 });
 
 gulp.task("font-woff", function () {
-	//перекидываем шрифты из директории src в build, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
+	//перекидываем шрифты из директории src в docs, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
 	return gulp
 		.src("src/fonts/**/*.+(eot|svg|ttf|otf|woff|woff2)")
 		.pipe(ttf2woff())
-		.pipe(gulp.dest("build/fonts/"))
+		.pipe(gulp.dest("docs/fonts/"))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -179,11 +179,11 @@ gulp.task("font-woff", function () {
 });
 
 gulp.task("font-woff2", function () {
-	//перекидываем шрифты из директории src в build, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
+	//перекидываем шрифты из директории src в docs, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
 	return gulp
 		.src("src/fonts/**/*.+(eot|svg|ttf|otf|woff|woff2)")
 		.pipe(ttf2woff2())
-		.pipe(gulp.dest("build/fonts/"))
+		.pipe(gulp.dest("docs/fonts/"))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -192,11 +192,11 @@ gulp.task("font-woff2", function () {
 });
 
 gulp.task("font-eot", function () {
-	//перекидываем шрифты из директории src в build, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
+	//перекидываем шрифты из директории src в docs, а заодно следим за новыми файлами, чтобы обновлять браузер, когда появляется шрифт
 	return gulp
 		.src("src/fonts/**/*.+(eot|svg|ttf|otf|woff|woff2)")
 		.pipe(ttf2eot())
-		.pipe(gulp.dest("build/fonts/"))
+		.pipe(gulp.dest("docs/fonts/"))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -205,7 +205,7 @@ gulp.task("font-eot", function () {
 });
 
 gulp.task("images", function () {
-	//пережимаем изображения и складываем их в директорию build
+	//пережимаем изображения и складываем их в директорию docs
 	return gulp
 		.src("src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)")
 		.pipe(size())
@@ -223,7 +223,7 @@ gulp.task("images", function () {
 				imagemin.svgo(),
 			]),
 		)
-		.pipe(gulp.dest("build/img"))
+		.pipe(gulp.dest("docs/img"))
 		.pipe(
 			browserSync.reload({
 				stream: true,
@@ -233,13 +233,13 @@ gulp.task("images", function () {
 });
 
 gulp.task("deletefonts", function () {
-	//задачи для очистки директории со шрифтами в build. Нужна для того, чтобы удалить лишнее.
-	return del.sync("build/fonts/**/*.*");
+	//задачи для очистки директории со шрифтами в docs. Нужна для того, чтобы удалить лишнее.
+	return del.sync("docs/fonts/**/*.*");
 });
 
 gulp.task("deleteimg", function () {
 	//аналогично предыдущей, но с картинками.
-	return del.sync("build/img/**/*.*");
+	return del.sync("docs/img/**/*.*");
 });
 
 gulp.task("watch", function () {
@@ -258,7 +258,7 @@ gulp.task("browser-sync", function () {
 	//настройки лайв-сервера
 	browserSync.init({
 		server: {
-			baseDir: "build/", //какую папку показывать в браузере
+			baseDir: "docs/", //какую папку показывать в браузере
 		},
 		browser: ["chrome"], //в каком браузере
 		host: "192.168.0.106", //IP сервера в локальной сети. Отключите, если у вас DHCP, пропишите под себя, если фиксированный IP в локалке.
